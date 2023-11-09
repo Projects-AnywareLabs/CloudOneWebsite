@@ -1,1385 +1,737 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html>
   <head>
-    <title>CloudOne</title>
+    
+    <!-- Basic -->
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
     <meta
       name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <title>CloudOne</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--owl slider stylesheet -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CMontserrat:100,200,300,400,500,600,700,800,900"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- nice select -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4="
+      crossorigin="anonymous"
+    />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
     <style>
-      .ie-panel {
-        display: none;
-        background: #212121;
-        padding: 10px 0;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-        clear: both;
+
+      .card-content {
+        flex: 2;
+    }
+    
+    .tech-details {
+        background: #f0f0f0;
+        padding: 10px;
+    }
+    
+    .tech-details h3 {
+        font-size: 18px;
+    }
+    
+    .tech-details ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .tech-details li {
+        margin: 5px 0;
+    }
+      .footer {
+        background-color: #004445;
+        color: #fff;
+        padding: 20px 0;
+    }
+    
+    .container1 {
+      display: flex;
+      flex-wrap: wrap;
+  }
+    
+    .footer-item {
+        flex: 1;
+        padding: 10px;
         text-align: center;
-        position: relative;
-        z-index: 1;
+    }
+    
+    .footer-item h4 {
+        font-size: 1.2em;
+    }
+    
+    .footer-item p {
+        font-size: 0.9em;
+    }
+      
+      .tabs {
+          text-align: center; /* Center-align the tabs */
       }
-      html.ie-10 .ie-panel,
-      html.lt-ie-10 .ie-panel {
-        display: block;
+
+      .tab {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        margin-bottom: 10px; /* Add margin to create a gap below the tabs */
+        transition: box-shadow 0.3s;
+    }
+
+    .tab.active {
+      box-shadow: 0 0 5px 2px #0074d9; /* Add a glow effect for the active tab */
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ddd; /* Add your card border styling here */
+}
+
+
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+      .content {
+          display: none;
+          padding: 10px;
+          text-align: left;
+          max-width: 800px; /* Set a fixed maximum width */
+          margin: 0 auto; /* Center-align the boxes */
       }
-    </style>
+
+      .active {
+          display: block;
+      }
+
+      .btn {
+          background: #0074d9;
+          color: #fff;
+          padding: 5px 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+
+      .box_img {
+        max-width: 100%; /* Make the image responsive by setting its max-width to 100% */
+        height: auto; /* Automatically adjust the image's height to maintain its aspect ratio */
+      }
+     
+      /* CSS for curved border */
+.curved-border {
+  background: #f2f2f2; /* Background color */
+  border-radius: 50px 50px 0 0; /* Adjust the border radius as needed */
+  padding: 50px 0; /* Add padding for spacing */
+}
+
+/* CSS for centering text */
+.about-content {
+  text-align: center;
+}
+
+/* CSS for the "About Us" heading */
+.about-content h2 {
+  text-transform: uppercase; /* Convert text to uppercase */
+  font-size: 36px; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Add margin for spacing */
+}
+
+/* CSS for the paragraph text */
+.about-content p {
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+  </style>
   </head>
+
   <body>
-    <div class="ie-panel">
-      <a href="http://windows.microsoft.com/en-US/internet-explorer/"
-        ><img
-          src="images/ie8-panel/warning_bar_0000_us.jpg"
-          height="42"
-          width="820"
-          alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
-      /></a>
-    </div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="preloader-item"></div>
+    <div class="hero_area">
+      <div class="hero_bg_box">
+        <video autoplay muted loop>
+          <source src="videos/aerial_-_18390 (1080p).mp4" type="video/mp4" />
+        </video>
       </div>
-    </div>
-    <div class="page">
-      <!-- <section class="d-none d-xl-block"><a class="d-block" href="https://www.templatemonster.com/landing-page-template/drone-electronics-clean-html-bootstrap-landing-page-template-83905.html" target="_blank"><img class="img-responsive" src="images/banner-top-2050x60.jpg" alt="" width="2050" height="60"/></a></section> -->
-      <div class="position-relative">
-        <header class="page-header">
-          <div class="rd-navbar-wrap">
-            <nav
-              class="rd-navbar rd-navbar-classic"
-              data-layout="rd-navbar-fixed"
-              data-sm-layout="rd-navbar-fixed"
-              data-md-layout="rd-navbar-fixed"
-              data-md-device-layout="rd-navbar-fixed"
-              data-lg-layout="rd-navbar-static"
-              data-lg-device-layout="rd-navbar-static"
-              data-xl-layout="rd-navbar-static"
-              data-xl-device-layout="rd-navbar-static"
-              data-xxl-layout="rd-navbar-static"
-              data-xxl-device-layout="rd-navbar-static"
-              data-lg-stick-up-offset="46px"
-              data-xl-stick-up-offset="46px"
-              data-xxl-stick-up-offset="46px"
-              data-lg-stick-up="true"
-              data-xl-stick-up="true"
-              data-xxl-stick-up="true"
-            >
-              <div
-                class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
-                data-rd-navbar-toggle=".rd-navbar-collapse"
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="index.html">   <img src="images/logo.png" alt="CloudOne Logo" style="width: 40px; height: auto;" /> CloudOne </a>
+
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
               >
-                <span></span>
-              </div>
-              <div class="rd-navbar-main">
-                <!--RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!--RD Navbar Toggle-->
-                  <button
-                    class="rd-navbar-toggle"
-                    data-rd-navbar-toggle=".rd-navbar-nav-wrap"
-                  >
-                    <span></span>
-                  </button>
-                  <!--RD Navbar Brand-->
-                  <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"
-                      ><img src="images/red.png" alt="" width="143" height="30"
-                    /></a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#features">Features</a>
-                      </li>
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#SecurityAndSurveillance"
-                          >Security And Surveillance</a
-                        >
-                      </li>
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#Mapping"
-                          >Mapping And Surveying</a
-                        >
-                      </li>
-                      <!-- <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#gallery">Gallery</a>
-                      </li> -->
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#contacts">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="rd-navbar-collapse">
-                  <ul class="social-menu justify-content-center">
-                    <li>
-                      <a class="icon novi-icon fl-glypho-tumblr1" href="#"></a>
-                    </li>
-                    <li>
-                      <a class="icon novi-icon fl-glypho-twitter" href="#"></a>
-                    </li>
-                    <li>
-                      <a
-                        class="icon novi-icon fl-glypho-facebook2"
-                        href="#"
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
+                <span class=""> </span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html"
+                      >Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="mapping.html"> Mapping</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="security.html">Security</a>
+                  </li>
+               
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                 
+                  </form>
+                </ul>
               </div>
             </nav>
           </div>
-        </header>
-        <section
-          class="section section-xl bg-image bg-default bg-image-custom bg-image-custom-1 position-relative"
-        >
-          <div class="container">
-            <div class="row justify-content-center justify-content-lg-start">
-              <div class="col-lg-4 col-xl-5 position-relative">
-                <div class="carousel-child-wrap">
-                  <div
-                    class="slick-slider carousel-child"
-                    id="child-carousel"
-                    data-for=".carousel-parent"
-                    data-swipe="true"
-                    data-items="1"
-                  >
-                    <div class="item-wrap">
-                      <div class="item-wrap">
-                        <div class="item">
-                          <img
-                            src="images/drone2.png"
-                            alt=""
-                            width="862"
-                            height="479"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item-wrap">
-                      <div class="item">
-                        <img
-                          src="images/drone2.png"
-                          alt=""
-                          width="862"
-                          height="479"
-                        />
-                      </div>
-                    </div>
-                    <div class="item-wrap">
-                      <div class="item">
-                        <img
-                          src="images/drone2.png"
-                          alt=""
-                          width="845"
-                          height="429"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-10 col-lg-8 col-xl-6 custom-col-lg">
-                <div
-                  class="slick-slider carousel-parent"
-                  data-dots="true"
-                  data-swipe="false"
-                  data-items="1"
-                  data-child="#child-carousel"
-                  data-for="#child-carousel"
-                >
-                  <div class="item-wrap">
-                    <div class="item">
-                      <h2 style="font-size: 30px">
-                        CloudOne Elevating Possibilities
-                      </h2>
-                      <p>
-                        We are embarking on an exciting journey as pioneers in
-                        the IT industry, driven by innovation and a commitment
-                        to excellence. With Japanese technology at the heart of
-                        our operations, we are dedicated to pushing the
-                        boundaries of what's possible. Our passion and hard work
-                        in this field have laid the foundation for our global
-                        presence, where we now serve as a beacon of pioneering
-                        technology in the world of drones.
-                      </p>
-                      <div class="group-md">
-                        <a
-                          class="button button-icon button-icon-right button-default-outline"
-                          href="#features"
-                          ><span
-                            class="icon material-icons-chevron_right"
-                          ></span
-                          >Learn more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-wrap">
-                    <div class="item">
-                      <h2>Mapping and Surveying Expertise at CloudOne AI</h2>
-                      <p>
-                        At CloudOne AI, our Mapping and Surveying division is
-                        dedicated to delivering precision and innovation from
-                        above. With a focus on accuracy and efficiency, we
-                        provide essential geospatial solutions that empower
-                        industries ranging from construction and real estate to
-                        mining and environmental management.
-                      </p>
-                      <div class="group-md">
-                        <a
-                          class="button button-icon button-icon-right button-default-outline"
-                          href="#Mapping"
-                          ><span
-                            class="icon material-icons-chevron_right"
-                          ></span
-                          >Learn more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="item-wrap">
-                    <div class="item">
-                      <h2 font-size="30px">
-                        Security and Surveillance Excellence by CloudOne AI
-                      </h2>
-                      <p>
-                        At CloudOne AI, our Security and Surveillance division
-                        is committed to fortifying safety and vigilance with
-                        advanced technology. We provide comprehensive solutions
-                        that empower organizations to protect assets, enhance
-                        monitoring capabilities, and ensure peace of mind.
-                      </p>
-                      <div class="group-md">
-                        <a
-                          class="button button-icon button-icon-right button-default-outline"
-                          href="#SecurityAndSurveillance"
-                          ><span
-                            class="icon material-icons-chevron_right"
-                          ></span
-                          >Learn more</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <section class="section section-lg text-center" id="features">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <h2>Drone Features</h2>
-              <p>
-                Our commitment to cutting-edge solutions has enabled us to
-                expand our footprint across the globe, serving as a beacon of
-                pioneering technology in the world of drones.
-              </p>
-            </div>
-          </div>
-          <div class="row justify-content-center row-45">
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/NewProject.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">Advanced Data Capture and Analysis</a>
-                </h6>
-                <p class="feature-description">
-                  The ability to collect and analyze data in real-time or
-                  post-flight is a fundamental feature that provides valuable
-                  insights for industries such as agriculture, construction,
-                  environmental monitoring, and more.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/tracking.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">GPS and Autonomous Navigation</a>
-                </h6>
-                <p class="feature-description">
-                  Drones with these features can follow predefined flight paths,
-                  maintain stable positions, and execute complex missions with
-                  accuracy. This capability is essential for applications like
-                  mapping, surveying, and surveillance.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/shield.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">Safety and Redundancy Features</a>
-                </h6>
-                <p class="feature-description">
-                  Safety is a top priority for drone operations. Advanced drones
-                  often come equipped with features like obstacle detection and
-                  avoidance systems, fail-safe mechanisms, redundant power
-                  systems, and geofencing
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <section
-        class="section section-lg parallax-container context-dark"
-        data-parallax-img="images/home-bg-red.jpg"
-      >
-        <div class="parallax-content">
-          <div
-            class="owl-carousel big-carousel"
-            data-items="1"
-            data-autoplay="false"
-            data-autoplay-speed="6000"
-            data-dots="true"
-            data-nav="true"
-            data-stage-padding="0"
-            data-loop="true"
-            data-margin="30"
-            data-mouse-drag="true"
-          >
-            <div class="big-carousel-item">
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class="slider_section">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-10 text-center">
-                    <h2 style="color: black">Delivery Drones</h2>
-                    <p>
-                      Celebrating the Future of Convenience with CloudOne AI's
-                      Delivery Drones. Our high-efficiency drones are
-                      revolutionizing last-mile delivery, bringing speed and
-                      convenience right to your doorstep. Embrace the future of
-                      logistics with secure, on-time deliveries.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="row row-30 justify-content-center align-items-center"
-                >
-                  <div class="col-lg-6">
-                    <img
-                      class="big-carousel-image"
-                      src="images/Drine1.gif"
-                      width="459"
-                      height="359"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <ul class="list-product">
-                      <li class="list-product-item">
-                        <div class="list-product-title">Flight Time</div>
-                        <div class="list-product-description">25 mins</div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Weight</div>
-                        <div class="list-product-description">
-                          1 kg [Different Varaition available]
-                        </div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Battery</div>
-                        <div class="list-product-description">
-                          6000 mAh 2S LiPo
-                        </div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Camera</div>
-                        <div class="list-product-description">
-                          <ul class="list-style">
-                            <li>6K VIDEO</li>
-                            <li>12 MP</li>
-                            <li>360⁰ RANGE</li>
-                            <li>3-AXIS GIMBAL</li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
+                <div class="row">
+                  <div class="col-lg-10 col-md-11 mx-auto">
+                    <div class="detail-box">
+                      <h1>
+                        Elevate Possibilities <br />
+                      </h1>
+                      <p>
+                        We blend AI and innovation to redefine drone capabilities.
+                      </p>
+                      <div class="btn-box">
+                        <a href="contact.html" class="btn1"> Contact Us </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="big-carousel-item">
+            <div class="carousel-item">
               <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-10 text-center">
-                    <h2 style="color: black">Survilance Drones</h2>
-                    <p>
-                      Elevating Security with CloudOne AI's Surveillance Drones.
-                      Our aerial surveillance solutions provide unmatched
-                      vigilance and monitoring capabilities for safeguarding
-                      assets and ensuring peace of mind. Trust in the skies to
-                      protect what matters most.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="row row-30 justify-content-center align-items-center"
-                >
-                  <div class="col-lg-6">
-                    <img
-                      class="big-carousel-image"
-                      src="images/Drine.gif"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <ul class="list-product">
-                      <li class="list-product-item">
-                        <div class="list-product-title">Max Speed</div>
-                        <div class="list-product-description">
-                          6 m/s (S-mode)
-                        </div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Weight</div>
-                        <div class="list-product-description">298 g</div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Battery</div>
-                        <div class="list-product-description">
-                          5500 mAh LiPo 4S
-                        </div>
-                      </li>
-                      <li class="list-product-item">
-                        <div class="list-product-title">Camera</div>
-                        <div class="list-product-description">
-                          <ul class="list-style">
-                            <li>1” CMOS</li>
-                            <li>Electronic Shutter</li>
-                            <li>4K VIDEO</li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section
-        class="section section-lg text-center position-relative"
-        id="accessories"
-      >
-        <div class="image-mask-product d-none d-md-block">
-          <img
-            src="images/blur-home-05-1043x605.png"
-            alt=""
-            width="1043"
-            height="605"
-          />
-        </div> -->
-      <!-- <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <h2>Accessories</h2>
-              <p>
-                Besides offering top-notch aerial drones, we also provide our
-                clients with a wide variety of accessories and components for
-                their drones. Here are some of the most popular products
-                available on our website for purchase and delivery.
-              </p>
-            </div>
-          </div>
-          <div class="row row-50 offset-xl-top-77 justify-content-center">
-            <div class="col-sm-6 col-md-3">
-              <div class="product">
-                <figure class="product-figure">
-                  <a href="#"
-                    ><img
-                      class="product-image"
-                      src="images/blur-home-06-254x114.png"
-                      alt=""
-                      width="254"
-                      height="114"
-                  /></a>
-                </figure>
-                <h5 class="product-title"><a href="#">Propulsion System</a></h5>
-                <h5 class="product-price"><span>$1300</span></h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="product">
-                <figure class="product-figure">
-                  <a href="#"
-                    ><img
-                      class="product-image"
-                      src="images/blur-home-07-180x155.png"
-                      alt=""
-                      width="180"
-                      height="155"
-                  /></a>
-                </figure>
-                <h5 class="product-title"><a href="#">4K Camera</a></h5>
-                <h5 class="product-price">
-                  <del>$1400</del><span>$1340</span>
-                </h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="product">
-                <figure class="product-figure">
-                  <a href="#"
-                    ><img
-                      class="product-image"
-                      src="images/blur-home-08-185x127.png"
-                      alt=""
-                      width="185"
-                      height="127"
-                  /></a>
-                </figure>
-                <h5 class="product-title">
-                  <a href="#">Airframe & Body Set</a>
-                </h5>
-                <h5 class="product-price"><span>$1120</span></h5>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-              <div class="product">
-                <figure class="product-figure">
-                  <a href="#"
-                    ><img
-                      class="product-image"
-                      src="images/blur-home-09-262x50.png"
-                      alt=""
-                      width="262"
-                      height="50"
-                  /></a>
-                </figure>
-                <h5 class="product-title">
-                  <a href="#">Polarizing Filters</a>
-                </h5>
-                <h5 class="product-price"><span>$950</span></h5>
-              </div>
-            </div>
-          </div>
-          <div class="link-wrap">
-            <a class="link" href="#"
-              >See more<span class="icon material-icons-chevron_right"></span
-            ></a> 
-          </div>
-        </div> -->
-      <!-- </section> -->
-      <section
-        class="section section-lg text-center"
-        id="SecurityAndSurveillance"
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <h2>SECURITY AND SURVEILLANCE</h2>
-              <p>
-                Our commitment to cutting-edge solutions has enabled us to
-                expand our footprint across the globe, serving as a beacon of
-                pioneering technology in the world of drones.
-              </p>
-            </div>
-          </div>
-          <div class="row justify-content-center row-45">
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/terror.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">ANTI-TERROR</a>
-                </h6>
-                <p class="feature-description">
-                  Advanced aerial surveilance to monitor high-risk areas and
-                  enhance security mesures against potential threats and acts of
-                  terrorism.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/border.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">BORDER SECURITY</a>
-                </h6>
-                <p class="feature-description">
-                  Aerial border patrols and surveillance for safeguarding
-                  national borders, tracking illicit activities, and ensuring
-                  territorial integrity.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/lighthouse.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">COASTAL SECURITY AND SURVEILLANCE</a>
-                </h6>
-                <p class="feature-description">
-                  Continuous monitoring of coastal regions, including ports and
-                  critical infrastructure, to enhance maritime security and
-                  prevent unauthorized activities.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/crime.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">CRIME CONTROL</a>
-                </h6>
-                <p class="feature-description">
-                  Aerial surveillance and data collection to support law
-                  enforcement in crime prevention, incident response, and
-                  evidence gathering.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/disaster.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">DISASTER MANAGEMENT</a>
-                </h6>
-                <p class="feature-description">
-                  Rapid drone deployment for assessing disaster-affected areas,
-                  search and rescue operations, and disaster relief planning
-                </p>
-              </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-              <div class="feature">
-                <figure class="feature-figure">
-                  <img
-                    class="feature-images"
-                    src="images/forest.png"
-                    alt=""
-                    width="51"
-                    height="70"
-                  />
-                </figure>
-                <h6 class="feature-title">
-                  <a href="#">FOREST AND WILDLIFE</a>
-                </h6>
-                <p class="feature-description">
-                  Aerial monitoring of forests and wildlife habitats to combat
-                  illegal logging, poaching, and protect endangered species
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- <section class="section section-lg" id="gallery">
-        <div class="container text-center">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <h2>Gallery</h2>
-              <p>
-                If you are still in doubt whether you need to purchase a drone
-                or not, here are some photos to help you make a decision. All of
-                our drone photos are done in a safe manner that complies with
-                all FAA commercial drone regulations.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="owl-carousel big-carousel"
-          data-items="1"
-          data-autoplay="false"
-          data-autoplay-speed="6000"
-          data-dots="true"
-          data-nav="true"
-          data-stage-padding="0"
-          data-loop="true"
-          data-margin="30"
-          data-mouse-drag="true"
-        >
-          <div class="big-carousel__item">
-            <div class="container">
-              <div
-                class="row row-30"
-                data-lightgallery="group"
-                data-lg-animation="lg-slide-circular"
-              >
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-01-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-01-468x220.jpg"
-                      alt=""
-                      width="468"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-02-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-02-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-03-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-03-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/gallery-04-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/gallery-04-469x220.jpg"
-                      alt=""
-                      width="469"
-                      height="220"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="big-carousel__item">
-            <div class="container">
-              <div
-                class="row row-30"
-                data-lightgallery="group"
-                data-lg-animation="lg-slide-circular"
-              >
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-01-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-01-468x220.jpg"
-                      alt=""
-                      width="468"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-02-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-02-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-03-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-03-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/gallery-04-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/gallery-04-469x220.jpg"
-                      alt=""
-                      width="469"
-                      height="220"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="big-carousel__item">
-            <div class="container">
-              <div
-                class="row row-30"
-                data-lightgallery="group"
-                data-lg-animation="lg-slide-circular"
-              >
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-01-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-01-468x220.jpg"
-                      alt=""
-                      width="468"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-02-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-02-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-7">
-                  <a
-                    class="thumbnail"
-                    href="images/blur-gallery-03-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/blur-gallery-03-670x220.jpg"
-                      alt=""
-                      width="670"
-                      height="220"
-                  /></a>
-                </div>
-                <div class="col-md-5">
-                  <a
-                    class="thumbnail"
-                    href="images/gallery-04-original.jpg"
-                    data-lightgallery="item"
-                    ><img
-                      src="images/gallery-04-469x220.jpg"
-                      alt=""
-                      width="469"
-                      height="220"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="link-wrap">
-          <a class="link" href="#"
-            >See more<span class="icon material-icons-chevron_right"></span
-          ></a>
-        </div>
-      </section> -->
-      <!-- <section
-        class="section bg-image-custom bg-image-custom-2 position-relative"
-      >
-        <div
-          class="owl-carousel owl-testimonials"
-          data-items="1"
-          data-autoplay="false"
-          data-autoplay-speed="6000"
-          data-dots="true"
-          data-nav="true"
-          data-stage-padding="0"
-          data-loop="true"
-          data-margin="30"
-          data-mouse-drag="true"
-        >
-          <div class="section-md">
-            <div class="container">
-              <div class="row justify-content-lg-end">
-                <div class="col-lg-11">
-                  <div class="testimonial">
-                    <div class="testimonial-avatar-wrapper">
-                      <img
-                        class="testimonial-avatar"
-                        src="images/home-10-170x170.jpg"
-                        alt=""
-                        width="170"
-                        height="170"
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <h3 class="testimonial-title">Stephen Smith</h3>
-                      <p class="testimonial-text">
-                        “I am always looking to expand the range of imaging
-                        products I work with. Drone has helped me a lot by
-                        providing top-notch drones that are more than suitable
-                        for my needs. Thank you for the quick delivery and great
-                        customer service!”
+                <div class="row">
+                  <div class="col-lg-10 col-md-11 mx-auto">
+                    <div class="detail-box">
+                      <h1>
+                        Quality Meets Precision <br />
+                      </h1>
+                      <p>
+                        Top-tier drones rigorously tested for reliability and performance.
                       </p>
-                      <b class="testimonial-site"
-                        ><a href="#">Regular Client</a></b
-                      >
-                      <ul class="social-menu testimonial-social">
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-tumblr1"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-twitter"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-facebook2"
-                            href="#"
-                          ></a>
-                        </li>
-                      </ul>
+                      <div class="btn-box">
+                        <a href="contact.html" class="btn1"> Contact Us </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="section-md">
-            <div class="container">
-              <div class="row justify-content-lg-end">
-                <div class="col-lg-11">
-                  <div class="testimonial">
-                    <div class="testimonial-avatar-wrapper">
-                      <img
-                        class="testimonial-avatar"
-                        src="images/home-11-170x170.jpg"
-                        alt=""
-                        width="170"
-                        height="170"
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <h3 class="testimonial-title">Amanda Wilson</h3>
-                      <p class="testimonial-text">
-                        “I have been looking for replacement parts and
-                        components for my drone I bought a few years ago.
-                        Luckily, your store has provided me with every part I
-                        needed to upgrade my drone. I will surely recommend you
-                        to my friends.”
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-10 col-md-11 mx-auto">
+                    <div class="detail-box">
+                      <h1>
+                        Your Drone, Your Vision
+                      </h1>
+                      <p>
+                        Tailored solutions for enthusiasts and professionals.
                       </p>
-                      <b class="testimonial-site"
-                        ><a href="#">Regular Client</a></b
-                      >
-                      <ul class="social-menu testimonial-social">
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-tumblr1"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-twitter"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-facebook2"
-                            href="#"
-                          ></a>
-                        </li>
-                      </ul>
+                      <div class="btn-box">
+                        <a href="" class="btn1"> Contact Us </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="section-md">
-            <div class="container">
-              <div class="row justify-content-lg-end">
-                <div class="col-lg-11">
-                  <div class="testimonial">
-                    <div class="testimonial-avatar-wrapper">
-                      <img
-                        class="testimonial-avatar"
-                        src="images/home-12-170x170.jpg"
-                        alt=""
-                        width="170"
-                        height="170"
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <h3 class="testimonial-title">Peter McMillan</h3>
-                      <p class="testimonial-text">
-                        “I’m not a pro in operating drones and that’s why I
-                        found the basic assistance from your staff very useful.
-                        Besides, your team has provided me with the necessary
-                        accessories for aerial photography that were very
-                        important for my photos.”
-                      </p>
-                      <b class="testimonial-site"
-                        ><a href="#">Regular Client</a></b
-                      >
-                      <ul class="social-menu testimonial-social">
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-tumblr1"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-twitter"
-                            href="#"
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            class="icon novi-icon fl-glypho-facebook2"
-                            href="#"
-                          ></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="image-mask-product-2 d-none d-md-block">
-          <img
-            src="images/blur-home-11-1177x692.png"
-            alt=""
-            width="1177"
-            height="692"
-          />
-        </div>
-      </section> -->
-      <section class="section section-154 pb-0 text-center" id="Mapping">
-        <div class="container">
-          <div class="special-offer">
-            <h2 class="special-offer-title">MAPPING AND SURVEYING</h2>
-            <p class="special-offer-text">
-              At CloudOne AI, our Security and Surveillance division is
-              committed to fortifying safety and vigilance with advanced
-              technology. We provide comprehensive solutions that empower
-              organizations to protect assets, enhance monitoring capabilities,
-              and ensure peace of mind.
-            </p>
-            <div class="row justify-content-center row-45">
-              <div class="col-sm-6 col-md-4">
-                <div class="feature">
-                  <figure class="feature-figure">
-                    <img
-                      class="feature-images"
-                      src="images/NewProject.png"
-                      alt=""
-                      width="51"
-                      height="70"
-                    />
-                  </figure>
-                  <h6 class="feature-title">
-                    <a href="#">LAND SURVEY</a>
-                  </h6>
-                  <p class="feature-description">
-                    Precision aerial surveys for property boundaries,
-                    topography, and land assessment, ensuring accurate data for
-                    land development and planning.
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="feature">
-                  <figure class="feature-figure">
-                    <img
-                      class="feature-images"
-                      src="images/tracking.png"
-                      alt=""
-                      width="51"
-                      height="70"
-                    />
-                  </figure>
-                  <h6 class="feature-title">
-                    <a href="#">MINING AREA PLANNING AND MAPPING</a>
-                  </h6>
-                  <p class="feature-description">
-                    Comprehensive aerial mapping solutions for mining sites,
-                    optimizing resource management, and monitoring environmental
-                    impacts
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="feature">
-                  <figure class="feature-figure">
-                    <img
-                      class="feature-images"
-                      src="images/shield.png"
-                      alt=""
-                      width="51"
-                      height="70"
-                    />
-                  </figure>
-                  <h6 class="feature-title">
-                    <a href="#">CONSTRUCTION AND REAL ESTATE</a>
-                  </h6>
-                  <p class="feature-description">
-                    Aerial imagery and mapping support for the construction
-                    industry, real estate development, and property assessment,
-                    enhancing project management and marketing.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section-146 bg-gray-50" id="contacts">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h3>Get in touch</h3>
-              <p class="big">
-                Have a question or a testimonial about our products? Feel free
-                to send us a message using the form below at any time.
-              </p>
-              <form
-                class="rd-form rd-mailform rd-mailform-contact"
-                data-form-output="form-output-global"
-                data-form-type="contact"
-                method="post"
-                action="bat/rd-mailform.php"
-              >
-                <div class="row row-30">
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input
-                        class="form-input"
-                        id="form-user-name"
-                        type="text"
-                        name="name"
-                        data-constraints="@Required"
-                      />
-                      <label class="form-label" for="form-user-name"
-                        >Your name
-                        <span class="text-secondary-2">*</span></label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-wrap">
-                      <input
-                        class="form-input"
-                        id="form-email"
-                        type="email"
-                        name="email"
-                        data-constraints="@Email @Required"
-                      />
-                      <label class="form-label" for="form-email"
-                        >Your email
-                        <span class="text-secondary-2">*</span></label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-wrap">
-                      <textarea
-                        class="form-input"
-                        id="form-message"
-                        name="message"
-                        data-constraints="@Required"
-                      ></textarea>
-                      <label class="form-label" for="form-message"
-                        >Your message</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="button button-icon button-icon-right button-primary-outline"
-                  type="submit"
-                >
-                  <span class="icon material-icons-chevron_right"></span>Send
-                  message
-                </button>
-              </form>
-            </div>
-            <div class="col-md-6 mt-5 mt-md-0">
-              <h3>Contact Information</h3>
-              <p class="big">
-                We are always available for a call or visit. Use the details
-                below to send us an e-mail, give us a call, or visit us at the
-                Drone office.
-              </p>
-              <ul class="list-xl list-contacts">
-                <li class="unit unit-spacing-md flex-column flex-sm-row">
-                  <div
-                    class="unit-left icon icon-contacts material-icons-location_on"
-                  ></div>
-                  <div class="unit-body">
-                    <h5 class="contacts-title">Address</h5>
-                    <div class="contacts-link">
-                      <a href="#"
-                        >Plot No.11 Door No. 3/348 New Door No.3/299 Mahatma
-                        Gandhi Street, Okkiyam Thoraipakkam <br />
-                        chennai - 6000097</a
-                      >
-                    </div>
-                  </div>
-                </li>
-                <!-- <li class="unit unit-spacing-md flex-column flex-sm-row">
-                  <div
-                    class="unit-left icon icon-contacts material-icons-local_phone"
-                  ></div> -->
-                  <!-- <div class="unit-body">
-                    <h5 class="contacts-title">Call Us</h5>
-                    <ul class="list-xs">
-                      <li class="contacts-link">
-                        <a href="tel:#"><b>India :</b>  +91 9789847651 </a>
-                      </li>
-                      <li class="contacts-link">
-                        <a href="tel:#"><b>Dubai :</b> +971 545660986 </a>
-                      </li>
-                    </ul>
-                  </div> -->
-                </li>
-                <li class="unit unit-spacing-md flex-column flex-sm-row">
-                  <div
-                    class="unit-left icon icon-contacts material-icons-send"
-                  ></div>
-                  <div class="unit-body">
-                    <h5 class="contacts-title">E-mail Us</h5>
-                    <div class="contacts-link">
-                      <a href="mailto:#">sales@cloud1ai.com</a>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section></section>
-      <footer class="section footer-classic">
-        <div class="container">
-          <!--Brand--><a class="brand" href="index.html"
-            ><img src="images/red.png" alt="" width="143" height="30"
-          /></a>
-          <ul class="footer-nav-list">
-            <li class="footer-nav-item">
-              <a class="footer-nav-link" href="#features">Features</a>
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link" href="#SecurityAndSurveillance"
-                >Security And Surveillance</a
-              >
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link" href="#Mapping"
-                >Mapping And Surveying</a
-              >
-            </li>
-            <li class="footer-nav-item">
-              <a class="footer-nav-link" href="#">Contacts</a>
-            </li>
-          </ul>
-          <ul class="social-menu justify-content-center">
-            <li><a class="icon novi-icon fl-glypho-tumblr1" href="#"></a></li>
-            <li><a class="icon novi-icon fl-glypho-twitter" href="#"></a></li>
-            <li><a class="icon novi-icon fl-glypho-facebook2" href="#"></a></li>
-          </ul>
-          <p class="rights">
-            <span>&copy;&nbsp;</span><span class="copyright-year"></span
-            ><span>&nbsp;</span><span>CloudOne</span
-            ><span>&nbsp;. All rights reserved.</span>
+      
+      <!-- end slider section -->
+    </div>
+
+    <!-- service section -->
+
+    <!-- <section class="service_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2 class="">Applications</h2>
+          <p class="col-lg-8 px-0">
+            If you are going to use a passage of Lorem Ipsum, you need to be
+            sure there isn't anything believable. If you are going to use a
+            passage of Lorem Ipsum, you need to be sure there isn't anything
           </p>
         </div>
-      </footer>
+        <div class="service_container">
+          <div class="carousel-wrap">
+            <div class="service_owl-carousel owl-carousel">
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s1.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Mapping And Surveying</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s4.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Machine Welding</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s6.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Car Welding</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s1.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Home Welding</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s4.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Machine Welding</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="box">
+                  <div class="img-box">
+                    <img src="images/s6.png" alt="" />
+                  </div>
+                  <div class="detail-box">
+                    <h5>Car Welding</h5>
+                    <p>
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+          <a href=""> Read More </a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- service section ends -->
+
+    <!-- about section -->
+
+    <section class="about_section curved-border">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <p class="detail_p_mt">
+                At CloudOne, we're passionate about drones. Our innovative startup fuses the latest AI technology with modern engineering to create UAVs. We're driven by a vision of intelligent, versatile drones that transform industries and lives. Quality is our hallmark, and our rigorous testing ensures reliable, top-tier products. Our customer-centric approach means you'll find the perfect drone for your needs, whether you're an enthusiast or professional. Join us in shaping the future of drone technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- about section ends -->
+    <section class="team_section layout_padding">
+      <div class="heading_container heading_center">
+          <h2>Our Products</h2>
+          <p>Innovation meets necessity with our cutting-edge drone solutions, addressing critical delivery and surveillance needs with precision and efficiency.</p>
+      </div>
+      <div class="tabs">
+          <div class="tab" onclick="showTab('deliveryDrones')">Delivery Drones</div>
+          <div class="tab" onclick="showTab('surveillanceDrones')">Surveillance Drones</div>
+      </div>
+      <div id="deliveryDrones" class="content active">
+        <div class="product">
+            <div class="card1">
+                <div class="card-content">
+                    <div class="image">
+                        <img src="images/deliverydrone.png" alt="Delivery Drone Image" width="300px">
+                    </div>
+                    <p>Efficient and versatile, our delivery drones swiftly transport essential goods, from medical supplies to groceries, with payloads ranging from 1 KG to 25 KG. They ensure timely, life-saving deliveries even in remote or challenging locations.</p>
+                    <div class="tech-details">
+                     
+                        <ul>
+                            <li><strong>PayLoad:</strong> 1Kg up to 25Kg</li>
+                            <li><strong>Flying Capacity:</strong> 30 mins +</li>
+                            <li><strong>Battery:</strong> 6000 mAh 2s LiPo</li>
+                            <li><strong>Camera:</strong> 4K Video | 12 MP | 360° Range</li>
+                            <li><strong>UAV Type:</strong> Mini & Macro</li>
+                            <!-- Add more tech details as needed -->
+                        </ul>
+                    </div>
+                    <!-- <button class="btn">Learn More</button> -->
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- coded by kraken-->
+    
+      <div id="surveillanceDrones" class="content">
+          <div class="product">
+              <div class="card1">
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="images/9-01.png" alt="Surveillance Drone Image" width="300px">
+                  </div>
+                      <p>Our surveillance drones, equipped with advanced night vision cameras and sensors, provide round-the-clock monitoring, detecting anomalies like intruders, extreme weather, and natural disasters. Their flexibility in flight paths ensures comprehensive situational awareness in remote areas.</p>
+                      <div class="tech-details">
+                     
+                        <ul>
+                            <li><strong>Target Detection : 300m +</strong> </li>
+                            <li><strong>Camera :</strong> 20x HD</li>
+                            <li><strong>Battery :</strong> ithium-ion batteries </li>
+                            <!-- Add more tech details as needed -->
+                        </ul>
+                    </div>
+                      <!-- <button class="btn">Learn More</button> -->
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+    
+
+    
+    
+
+    <!-- team section -->
+
+    <section class="team_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Applications</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <video autoplay muted loop width="100%" height="auto">
+                  <source src="videos/survillance.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="detail-box">
+                <h5 style="font-size: 24px; font-weight: bold">
+                  Mapping and Surveying
+                </h5>
+                <p>
+                  Mapping and surveying with drones involves using unmanned
+                  aerial vehicles to collect high-resolution imagery and data
+                  for various applications.
+                </p>
+                <div class="btn-box">
+                  <a href="mapping.html">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-sm-6 mx-auto">
+            <div class="box">
+              <div class="img-box">
+                <video autoplay muted loop width="100%" height="auto">
+                  <source src="videos/security.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="detail-box">
+                <h5 style="font-size: 24px; font-weight: bold">
+                  Security and Surveillance
+                </h5>
+                <p>
+                  Drones equipped with cameras and sensors are used to enhance
+                  security in areas such as industrial facilities, and private
+                  properties by providing real-time monitoring and data
+                  collection.
+                </p>
+
+                <div class="btn-box">
+                  <a href="security.html">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end team section -->
+
+    <!-- contact section -->
+    <section class="contact_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 px-0">
+            <div class="img-box">
+              <img
+                src="images/3.png"
+                class="box_img"
+                alt="about img"
+              />
+            </div>
+          </div>
+          <div class="col-md-5 mx-auto">
+            <div class="form_container">
+              <div class="heading_container heading_center">
+                <h2>Get In Touch</h2>
+              </div>
+              <form
+  action="https://formspree.io/f/xvojyoyp"
+  method="POST"
+>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input
+                      type="text"
+                      name ="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                </div>
+               
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input
+                    name="email"
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col">
+                    <input
+                    name ="message"
+                      type="text"
+                      class="message-box form-control"
+                      placeholder="Message"
+                    />
+                  </div>
+                </div>
+                <div class="btn_box">
+                  <button type="submit">SEND</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end contact section -->
+
+    <!-- client section -->
+
+    <!-- end client section -->
+
+    <!-- info section -->
+    <section class="info_section">
+      <div class="container">
+        <div class="info_top">
+          <div class="row">
+            <div class="col-md-3">
+              <a class="navbar-brand" href="index.html"> CloudOne </a>
+              <p>
+                Unlocking the Sky's Potential: Elevating Efficiency and Precision with Our Drone Solutions.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <div class="info_detail">
+                <h5>Services</h5>
+                <p>
+                  We offer a wide range of services, including delivery, surveillance, mapping, and surveying.
+              </div>
+              
+            </div>
+            <div class="col-lg-2 col-md-5">
+              <div>
+                <h5>Useful links</h5>
+                <ul class="info_menu">
+                  <li>
+                    <a href="index.html"> Home </a>
+                  </li>
+                  <li>
+                    <a href="mapping.html"> Mapping </a>
+                  </li>
+                  <li>
+                    <a href="security.html"> Security </a>
+                  </li>
+                  <li class="mb-0">
+                    <a href="contact.html"> Contact Us </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <i class="fa fa-map-marker" aria-hidden="true"> </i>
+              <p>
+                Plot No.11 Door No. 3/348 New Door No.3/299 Mahatma Gandhi Street, Okkiyam Thoraipakkam Chennai - 6000097
+              </p>
+              <p>Email: <a href="mailto:sales@cloud1ai.com">sales@cloud1ai.com</a></p>
+
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- end info_section -->
+
+    <!-- jQery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- nice select -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+      integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <script>
+      function showTab(tabName) {
+          const tabs = document.getElementsByClassName('content');
+          for (let tab of tabs) {
+              tab.style.display = 'none';
+          }
+          document.getElementById(tabName).style.display = 'block';
+          // Remove the "active" class from all tabs
+          const tabElements = document.getElementsByClassName('tab');
+          for (let tab of tabElements) {
+              tab.classList.remove('active');
+          }
+          // Add the "active" class to the selected tab
+          document.querySelector('.tab[data-tab="' + tabName + '"]').classList.add('active');
+      }
+  </script>
+    <!-- End Google Map -->
   </body>
 </html>
