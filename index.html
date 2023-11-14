@@ -171,6 +171,68 @@
       .about-content p {
         font-size: 18px; /* Adjust the font size as needed */
       }
+      .centered-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .text-box {
+        text-align: center;
+        margin: 0 auto; /* This centers the box horizontally */
+        width: 80%; /* Adjust the width as needed */
+        background-color: #f0f0f0; /* Example background color */
+        padding: 20px;
+      }
+
+      .use-cases-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        background-color: #004445;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        padding: 25px 15px;
+        margin-bottom: 100px;
+        margin-top: 50px;
+      }
+
+      .use-case {
+        text-align: center;
+        margin: 15px 15px 15px 15px;
+      }
+
+      .use-case img {
+        width: 50px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+        margin-bottom: 10px;
+      }
+
+      .use-case p {
+        font-size: 14px;
+      }
+
+      .video-content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0; /* Add margin as needed */
+      }
+
+      .video-container {
+        flex: 1;
+      }
+
+      .content {
+        flex: 1;
+        padding: 0 20px; /* Add padding as needed */
+      }
+
+      .video-container video {
+        width: 100%;
+        height: 800px;
+      }
     </style>
   </head>
 
@@ -431,62 +493,71 @@
       </div>
     </section>
 
+    <div class="text-box">
+      <p classname="text-font">
+        UAVs have been designed to be able to handle all terrains and
+        temperature conditions. Our UAVs have been used in extreme conditions,
+        from very low temperature at high altitudes such as in Ladakh to very
+        high temperatures such as in Thar desert, meaning that our UAVs have
+        experienced some of the harshest environments in the world.
+      </p>
+    </div>
+
     <!-- team section -->
 
-    <section class="team_section layout_padding">
-      <div class="container">
-        <div class="heading_container heading_center">
-          <h2>Applications</h2>
+    <section class="use-cases-section">
+      <div class="use-case-group">
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Encryption and Cyber Security</p>
         </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 mx-auto">
-            <div class="box">
-              <div class="img-box">
-                <video autoplay muted loop width="100%" height="auto">
-                  <source src="videos/survillance.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div class="detail-box">
-                <h5 style="font-size: 24px; font-weight: bold">
-                  Mapping and Surveying
-                </h5>
-                <p>
-                  Mapping and surveying with drones involves using unmanned
-                  aerial vehicles to collect high-resolution imagery and data
-                  for various applications.
-                </p>
-                <div class="btn-box">
-                  <a href="mapping.html">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-md-4 col-sm-6 mx-auto">
-            <div class="box">
-              <div class="img-box">
-                <video autoplay muted loop width="100%" height="auto">
-                  <source src="videos/security.mp4" type="video/mp4" />
-                </video>
-              </div>
-              <div class="detail-box">
-                <h5 style="font-size: 24px; font-weight: bold">
-                  Security and Surveillance
-                </h5>
-                <p>
-                  Drones equipped with cameras and sensors are used to enhance
-                  security in areas such as industrial facilities, and private
-                  properties by providing real-time monitoring and data
-                  collection.
-                </p>
-
-                <div class="btn-box">
-                  <a href="security.html">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Autonomous Operation</p>
         </div>
+      </div>
+
+      <div class="use-case-group">
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Versatile Payload Capacity</p>
+        </div>
+
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Swarm Drone Technology</p>
+        </div>
+      </div>
+
+      <div class="use-case-group">
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Communication and Data Transfer</p>
+        </div>
+
+        <div class="use-case">
+          <img src="images/success.png" alt="Checkmark" />
+          <p>Smart Return To Launch</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-content-section">
+      <div class="video-container">
+        <video autoplay muted loop width="100%">
+          <source
+            src="videos/Unleash Aerial Vigilance Against Terrorism.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="content">
+        <h2>Your Video Title</h2>
+        <p>
+          Your content goes here. Describe the video or provide additional
+          information.
+        </p>
       </div>
     </section>
 
