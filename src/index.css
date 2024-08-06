@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ */
+@layer base {
+  :root{
+    --cloudone-blue: 29, 49, 60;
+    --cloudone-red: 227, 34, 44;
+    --cloudone-gradient-one: 233, 255, 100;
+    --cloudone-gradient-two:  255, 100, 156;
+    --cloudone-gradient-three:  72, 98, 30;
+    --cloudone-gradient-four: 146, 200, 62;
+  }
+  html {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+  }
+ 
+  .jakarta-plus{
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    height: 100%;
+    @apply w-[95%] lg:w-[90%] mx-auto
+  }
+
+}
+
+@keyframes marquee{
+    to{
+      left: -550px;
+    }
+}
+@keyframes menu{
+  to{
+    left: -550px;
+  }
+}
+
+
+.marquee-item {
+  left: calc(500px * 3);
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-timing-function:  linear;
+  animation-iteration-count: infinite;
+}
+.marquee-wrapper:hover .marquee-item{
+  animation-play-state: paused;
+}
+
+.grid-co{
+ 
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas: 
+  "ecs . vpc "
+  ". drone . "
+  "cdt . ao";
+}
+
+.drone{
+  grid-area: drone;
+}
+
+
