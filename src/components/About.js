@@ -1,16 +1,16 @@
 
 import DroneTopView from '../assets/DroneTopView.png'
-import Laptop from '../assets/laptop.jpg'
+
 import { IoStar } from "react-icons/io5";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { CiLock, CiWallet, CiShare1 } from "react-icons/ci";
 import { PiReceiptLight } from "react-icons/pi";
 import Container from './Container'
-import { FiDatabase } from "react-icons/fi";
+
 import { ACCORDIAN_ITEMS } from './constants';
 import Testinonials from './Testinonials'
-import Advisors from "../assets/advisors.png";
-import Heads from "../assets/heads.png";
+
+
 import AllMembersArrowImg from "../assets/all_members_button.png";
 import TeamMember1Img from "../assets/team_member1.png";
 import TeamMember2Img from "../assets/team_member2.png";
@@ -150,8 +150,8 @@ function About() {
                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
                           <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Indian Institue of Space Science  & technology</p>
+                            {/* <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p> */}
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
                            <img src={TeamMember1Img} alt="team_member_1" className="w-full h-auto"/>
@@ -164,8 +164,10 @@ function About() {
                          </div>
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Dr. Aravind Vaidyanathan</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Professor, IIST </p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Expert in System Engineering & Propulsion </p>
+
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
                             <img src={TeamMember2Img} alt="team_member_1" className="w-full h-auto"/>
@@ -178,9 +180,12 @@ function About() {
                          </div>
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Dr. Priyadarshnam Hari</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Professor, IIST</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Expert in Avionics architecture and space system</p>
+
                          </div>
+                         
                          <div className="w-full h-auto max-w-[395px]">
                             <img src={TeamMember3Img} alt="team_member_1" className="w-full h-auto"/>
                          </div>
@@ -190,10 +195,11 @@ function About() {
                              <img src={Linkedin} alt="linkedin"/>
                           </div>
                          </div>
+                         
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Silverster Antony</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Founder & CEO</p>
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
                             <img src={TeamMember4Img} alt="team_member_1" className="w-full h-auto"/>
@@ -206,8 +212,8 @@ function About() {
                          </div>
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Tarun Kumar Jhabakh</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Founder & Investor</p>
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
                             <img src={TeamMember5Img} alt="team_member_1" className="w-full h-auto"/>
@@ -220,8 +226,8 @@ function About() {
                          </div>
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">JOHN SMITH</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p>
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Robert Maria Joseph Francis</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Founder & Investor</p>
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
                             <img src={TeamMember6Img} alt="team_member_1" className="w-full h-auto"/>
@@ -256,18 +262,18 @@ function About() {
                           
                         <div className="h-[627px] lg:col-span-2 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
                             <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                                <img src={Galaxia_Branding} alt="Galaxia Branding" className="w-full h-full object-fill block" />
+                                <img src={Galaxia_Branding} alt="Galaxia Branding" className="w-full h-full object-fill block"  />
                             </div>
                             <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                <p>Galaxia Branding</p>
+                                {/* <p>CloudOne Lab</p> */}
                             </div>
                         </div>
                         <div className="h-[627px] lg:col-span-1 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
                             <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                                <img src={John_Mayer_Nyc} alt="John Mayer Nyc" className="w-full h-full object-fill block" />
+                                <img src={John_Mayer_Nyc}  alt="John Mayer Nyc" className="w-full h-full object-fill block" />
                             </div>
                             <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                <p>John Mayer NYC</p>
+                                {/* <p>John Mayer NYC</p> */}
                             </div>
                         </div>
 
@@ -277,7 +283,7 @@ function About() {
                                 <img src={Nayzak_Patterns} alt="Nayzak Patterns" className="w-full h-full object-fill block" />
                             </div>
                             <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                <p>Nayzak Patterns</p>
+                                {/* <p>Nayzak Patterns</p> */}
                             </div>
                         </div>
                         <div className="h-[627px] lg:col-span-2 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
@@ -285,7 +291,7 @@ function About() {
                                <img src={Crave_Chips} alt="Crave Chips" className="w-full h-full object-fill block" />
                             </div>
                             <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                               <p>Crave Chips</p>
+                               {/* <p>Crave Chips</p> */}
                             </div>
                         </div>
                       </div>

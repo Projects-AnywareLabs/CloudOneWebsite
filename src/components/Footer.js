@@ -12,7 +12,7 @@ function Footer() {
                 <section className='container md:flex md:justify-between md:gap-3 text-center md:text-left'>
                     <div className=' md:w-2/3 text-4xl md:text-6xl font-responsive font-bold uppercase'>
                         <h1 className='text-gray-100'>Our innovations are synchronized with your</h1>
-                        <h1 className='text-yellow-500'>operational objectives</h1>
+                        <h1 className='text-[#92C83E]'>operational objectives</h1>
                     </div>
                     <div className='md:w-1/3 md:mt-[-9%] rounded-xl '>
                         <SayHelloForm />
