@@ -12,9 +12,9 @@ function Footer() {
                 <section className='container md:flex md:justify-between md:gap-3 text-center md:text-left'>
                     <div className=' md:w-2/3 text-4xl md:text-6xl font-responsive font-bold uppercase'>
                         <h1 className='text-gray-100'>Our innovations are synchronized with your</h1>
-                        <h1 className='text-yellow-500'>operational objectives</h1>
+                        <h1 className='text-[#92C83E]'>operational objectives</h1>
                     </div>
-                    <div className='md:w-1/3 md:mt-[-8%] rounded-xl '>
+                    <div className='md:w-1/3 md:mt-[-9%] rounded-xl '>
                         <SayHelloForm />
                     </div>
                 </section>
@@ -59,8 +59,13 @@ const SayHelloForm = () => {
     return (
         <div className='bg-white py-4 px-6 rounded-[18px] border-8 border-[#20343c]'>
             <form onSubmit={submitForm}>
-                <textarea id="contact" placeholder='Say Hi!' name="contact" rows="8" cols="50" className='w-full  rounded-xl p-4 text-gray-800 bg-stone-200' />
-                <button className='w-full p-4 mt-2 text-lg font-bold text-[#20343c] bg-yellow-500  rounded-xl' type="submit">Send email</button>
+                <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">NAME</label>
+                <input id="name" type='text' placeholder='Enter your name' className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]'/>
+                <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">EMAIL</label>
+                <input id="email" type="email" placeholder='Enter your email' className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]'/>
+                <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">YOUR QUESTION</label>
+                <textarea id="contact" placeholder='Enter Your Question Here ....' name="contact" rows="4" cols="50" className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]' />
+                <button className='w-full p-4 mt-2 text-lg font-bold text-[#20343c] bg-[#92C83E] rounded-xl' type="submit">Send email</button>
             </form>
         </div>
     )
