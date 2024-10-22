@@ -12,7 +12,7 @@ import Testinonials from './Testinonials'
 
 
 import AllMembersArrowImg from "../assets/all_members_button.png";
-import TeamMember1Img from "../assets/team_member1.png";
+
 import TeamMember2Img from "../assets/team_member2.png";
 import TeamMember3Img from "../assets/team_member3.png";
 import TeamMember4Img from "../assets/team_member4.png";
@@ -148,21 +148,21 @@ function About() {
                        </div>
 
                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
-                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                          <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Indian Institue of Space Science  & technology</p>
-                            {/* <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Co-Founder & CEO</p> */}
+                          {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6"> */}
+                          {/* <div className="flex flex-col items-center gap-[3.9px]">
+                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Vivin Silva</p>
+                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Director</p>
                          </div>
                          <div className="w-full h-auto max-w-[395px]">
-                           <img src={TeamMember1Img} alt="team_member_1" className="w-full h-auto"/>
-                         </div>
-                          <div className='h-[50px] w-full flex justify-center items-center space-x-[9px]'>
+                           <img src={Vivin} alt="team_member_1" className="w-full h-auto"/>
+                         </div> */}
+                          {/* <div className='h-[50px] w-full flex justify-center items-center space-x-[9px]'>
                              <img src={Facebook} alt="facebook"/>
                              <img src={Twitter} alt="twitter"/>
                              <img src={Linkedin} alt="linkedin"/>
-                          </div>
-                         </div>
-                         <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+                          </div> */}
+                         {/* </div> */}
+                         {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
                             <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Dr. Aravind Vaidyanathan</p>
                             <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Professor, IIST </p>
@@ -194,7 +194,7 @@ function About() {
                              <img src={Twitter} alt="twitter"/>
                              <img src={Linkedin} alt="linkedin"/>
                           </div>
-                         </div>
+                         </div> */}
                          
                          <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
@@ -210,7 +210,7 @@ function About() {
                              <img src={Linkedin} alt="linkedin"/>
                           </div>
                          </div>
-                         <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+                         {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
                             <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Tarun Kumar Jhabakh</p>
                             <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Founder & Investor</p>
@@ -223,8 +223,8 @@ function About() {
                              <img src={Twitter} alt="twitter"/>
                              <img src={Linkedin} alt="linkedin"/>
                           </div>
-                         </div>
-                         <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+                         </div> */}
+                         {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                           <div className="flex flex-col items-center gap-[3.9px]">
                             <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Robert Maria Joseph Francis</p>
                             <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Founder & Investor</p>
@@ -237,7 +237,7 @@ function About() {
                              <img src={Twitter} alt="twitter"/>
                              <img src={Linkedin} alt="linkedin"/>
                           </div>
-                         </div>
+                         </div> */}
                       </div>
 
 
