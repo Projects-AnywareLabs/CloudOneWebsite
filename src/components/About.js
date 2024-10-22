@@ -252,53 +252,7 @@ function About() {
                 </Container>
 
                 <div className='pt-16'>
-                  <Container className='pt-16'>
-                     <div className="w-full lg:w-1/2 mx-auto py-8">
-                        <h1 className='text-5xl md:text-6xl text-center font-bold font-inter text-cloudone-blue pb-[10px]'><span className='text-cloudone-gradient-four'>See</span> Your Vision</h1>
-                        <p className='leading-relaxed text-center text-cloudone-blue'>Innovation meets necessity with our cutting-edge drone solutions, addressing critical delivery and surveillance needs with precision and efficiency.</p>
-                     </div>
-
-                     <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4 justify-items-stretch">
-                          
-                        <div className="h-[627px] lg:col-span-2 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
-                            <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                                <img src={Galaxia_Branding} alt="Galaxia Branding" className="w-full h-full object-fill block"  />
-                            </div>
-                            <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                {/* <p>CloudOne Lab</p> */}
-                            </div>
-                        </div>
-                        <div className="h-[627px] lg:col-span-1 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
-                            <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                                <img src={John_Mayer_Nyc}  alt="John Mayer Nyc" className="w-full h-full object-fill block" />
-                            </div>
-                            <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                {/* <p>John Mayer NYC</p> */}
-                            </div>
-                        </div>
-
-                       
-                        <div className="h-[627px] lg:col-span-1 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
-                            <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                                <img src={Nayzak_Patterns} alt="Nayzak Patterns" className="w-full h-full object-fill block" />
-                            </div>
-                            <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                                {/* <p>Nayzak Patterns</p> */}
-                            </div>
-                        </div>
-                        <div className="h-[627px] lg:col-span-2 lg:justify-self-stretch rounded-[24px] border-[2px] border-[#282828] flex flex-col">
-                            <div className="flex-grow rounded-t-[24px] overflow-hidden">
-                               <img src={Crave_Chips} alt="Crave Chips" className="w-full h-full object-fill block" />
-                            </div>
-                            <div className="h-[68px] bg-[#1D313C] flex items-center justify-center rounded-b-[18px]">
-                               {/* <p>Crave Chips</p> */}
-                            </div>
-                        </div>
-                      </div>
-
-
-
-                   </Container>
+                  
                 </div>
 
                 <div className='py-16'>
