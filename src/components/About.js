@@ -266,7 +266,7 @@ function About() {
               <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Silverster Antony
+                    Silvaster Antony
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
                     Founder & CEO
