@@ -1,4 +1,6 @@
-import HeroDrone from '../assets/28f737ed9428906a7c7848c0d86ee06d.png'
+import HeroDrone1 from '../assets/Drone pngs/Drone.png'
+import HeroDrone2 from '../assets/Drone pngs/Drone3.png'
+import HeroDrone3 from '../assets/Drone pngs/Dronev1.png'
 import { MdLockReset } from "react-icons/md";
 import { SiPayloadcms } from "react-icons/si";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -55,17 +57,17 @@ export const CARASOUL = [
     {
         mainTitle: "We believe that progress only happens when",
         subtext: "Contantly pushing the boundaries of what's possible with the drones",
-        image: HeroDrone
+        image: HeroDrone1
     },
     {
         mainTitle: "We believe that progress only happens when",
         subtext: "Contantly pushing the boundaries of what's possible with the drones",
-        image: HeroDrone
+        image: HeroDrone2
     },
     {
         mainTitle: "We believe that progress only happens when",
         subtext: "Contantly pushing the boundaries of what's possible with the drones",
-        image: HeroDrone
+        image: HeroDrone3
     }
 ]
 

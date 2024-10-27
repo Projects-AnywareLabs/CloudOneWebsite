@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import Container from './Container'
 import AirplaneLuggage from '../assets/AirplaneLuggage.png'
 import VideoSource from "../assets/3255275-uhd_3840_2160_25fps.mp4"
-import DGIDrone from '../assets/DGI-Drone.png'
+import DGIDrone from '../assets/Drone pngs/Drone5.png'
 import Testinonials from './Testinonials'
 import CarasoulCard from './CarasoulCard'
 import Carasoul from './Carasoul'
@@ -32,7 +32,7 @@ function Home() {
                     <h1 className=' container text-cloudone-blue text-5xl font-bold leading-snug'>What’s Possible With Our Drones <p>Delivery. Defense. Surveillance. Mapping.</p></h1>
                     <p className='  containertext-cloudone-blue py-8 font-medium'></p>
                     <div className='container grid-co lg:grid'>
-                        <div className='drone pb-8 md:pb-0' ><img src={DGIDrone} /></div>
+                        <div className='drone pb-0 md:pb-0' ><img src={DGIDrone} className="block w-full h-auto"/></div>
                         {
                             FEATURES.map((feature, i) => {
                                 var ga = "";
@@ -46,7 +46,7 @@ function Home() {
                                     case 3: ga = "ao"
                                         break;
                                 }
-                                return <div style={{ gridArea: `${ga}` }} className='flex flex-col justify-center items-center py-8 w-max-[300px] mx-auto'>
+                                return <div style={{ gridArea: `${ga}` }} className='flex flex-col justify-center items-center py-4 w-max-[300px] mx-auto'>
                                     <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center  items-center rounded-lg'>{feature.icon}</span>
                                     <h1 className='font-semibold text-cloudone-blue py-4'>{feature.main}</h1>
                                     <p className='font-light leading-relaxed'>{feature.subtext}</p>
