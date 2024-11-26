@@ -47,7 +47,7 @@
 import React, { useState } from 'react';
 import Container from './Container';
 import { PRODUCTS } from './constants';
-import DeliveryDrone from '../assets/DeliveryDrone.png';
+// import DeliveryDrone from '../assets/DeliveryDrone.png';
 
 function ProductsCarasoul() {
     const [activeTab, setActiveTab] = useState('Nimbus-S');
@@ -74,7 +74,7 @@ function ProductsCarasoul() {
                     <p>{product.description}</p>
                 </div>
                 <div className='md:hidden w-full py-8'>
-                    <img className='w-full' src={product.image} />
+                    <img className='w-full' alt='product-image' src={product.image} />
                 </div>
                 <div className="grid grid-cols-2 py-8 gap-8">
                     {

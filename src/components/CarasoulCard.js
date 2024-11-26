@@ -1,19 +1,26 @@
-
-import React from 'react'
+import React from "react";
 
 function CarasoulCard({ content, size }) {
-    return (
-        <div className='w-full flex-shrink-0'>
-            <div className='w-full bg-gradient-to-r from-cloudone-gradient-four/45 to-cloudone-gradient-four/25 flex justify-center items-center'><img src={content.image} style={{ width: "600px", height: "600px" }} /></div>
-            <div className='bg-cloudone-gradient-four py-2 px-4'>
-                <p className='jakarta-plus font-semibold text-cloudone-blue py-4'>{content.mainTitle}</p>
-                <p className='jakarta-plus font-semibold text-white'>{content.subtext}</p>
-            </div>
-            <div>
-
-            </div>
-        </div>
-    )
+  return (
+    <div className="flex-shrink-0 w-full">
+      <div className="flex items-center justify-center w-full bg-gradient-to-r from-cloudone-gradient-four/45 to-cloudone-gradient-four/25">
+        <img
+          src={content.image}
+          alt="content-image"
+          style={{ width: "600px", height: "600px" }}
+        />
+      </div>
+      <div className="px-4 py-2 bg-cloudone-gradient-four">
+        <p className="py-4 font-semibold jakarta-plus text-cloudone-blue">
+          {content.mainTitle}
+        </p>
+        <p className="font-semibold text-white jakarta-plus">
+          {content.subtext}
+        </p>
+      </div>
+      <div></div>
+    </div>
+  );
 }
 
-export default CarasoulCard
+export default CarasoulCard;

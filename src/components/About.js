@@ -11,30 +11,30 @@ import Testinonials from "./Testinonials";
 
 import AllMembersArrowImg from "../assets/all_members_button.png";
 
-import TeamMember2Img from "../assets/team_member2.png";
-import TeamMember3Img from "../assets/team_member3.png";
+// import TeamMember2Img from "../assets/team_member2.png";
+// import TeamMember3Img from "../assets/team_member3.png";
 import TeamMember4Img from "../assets/team_member4.png";
 import TeamMember5Img from "../assets/team_member5.png";
 import TeamMember7Img from "../assets/team_member7.jpg";
 import TeamMember8Img from "../assets/team_member8.jpg";
 import TeamMember9Img from "../assets/team_member9.jpg";
 import TeamMember10Img from "../assets/team_member10.jpg";
-import TeamMember6Img from "../assets/team_member6.png";
-import Facebook from "../assets/facebook.png";
-import Twitter from "../assets/twitter.png";
+// import TeamMember6Img from "../assets/team_member6.png";
+// import Facebook from "../assets/facebook.png";
+// import Twitter from "../assets/twitter.png";
 import Linkedin from "../assets/Linkedin.png";
-import Galaxia_Branding from "../assets/galaxia_branding.png";
-import John_Mayer_Nyc from "../assets/john_mayer_nyc.png";
-import Nayzak_Patterns from "../assets/nayzak_patterns.png";
-import Crave_Chips from "../assets/crave_chips.png";
+// import Galaxia_Branding from "../assets/galaxia_branding.png";
+// import John_Mayer_Nyc from "../assets/john_mayer_nyc.png";
+// import Nayzak_Patterns from "../assets/nayzak_patterns.png";
+// import Crave_Chips from "../assets/crave_chips.png";
 
 function About() {
   return (
     <>
       <div className="h-fit bg-gradient-to-b from-cloudone-gradient-four/55 to-cloudone-gradient-four/0">
         <Container className="p-16 text-cloudone-blue lg:flex md:gap-8">
-          <div className="shadow-xl rounded-xl overflow-hidden h-fit max-w-fit ">
-            <div className="bg-cloudone-blue text-white font-extrabold text-2xl md:text-3xl p-8 relative">
+          <div className="overflow-hidden shadow-xl rounded-xl h-fit max-w-fit ">
+            <div className="relative p-8 text-2xl font-extrabold text-white bg-cloudone-blue md:text-3xl">
               <h1 className="mr-8">Where AI Meets Robotics Excellence</h1>
               <div className="text-6xl rotate-90 absolute text-amber-300 bottom-[16px] right-[24px]">
                 <IoStar />
@@ -48,10 +48,10 @@ function About() {
             </div>
           </div>
           <div>
-            <h1 className="text-6xl uppercase font-black text-cloudone-blue text-center py-8">
+            <h1 className="py-8 text-6xl font-black text-center uppercase text-cloudone-blue">
               Cloudone AI Robotics Lab
             </h1>
-            <p className="text-center leading-relaxed">
+            <p className="leading-relaxed text-center">
               At CloudOne, we see drones not just as flying machines but as
               catalysts for transformation. With a firm commitment to innovation
               and a vision for the future, we are redefining the possibilities
@@ -62,13 +62,17 @@ function About() {
             </button>
           </div>
           <div className="hidden w-full my-auto lg:block">
-            <img className="w-full rotate-12" src={DroneTopView}></img>
+            <img
+              className="w-full rotate-12"
+              src={DroneTopView}
+              alt="DroneTopView"
+            ></img>
           </div>
         </Container>
       </div>
       <div>
         <Container>
-          <h1 className="text-5xl md:text-6xl text-center font-bold text-cloudone-blue">
+          <h1 className="text-5xl font-bold text-center md:text-6xl text-cloudone-blue">
             <span className="text-cloudone-gradient-four">The Process</span> Of
             Your Vision
           </h1>
@@ -78,59 +82,59 @@ function About() {
             precision and efficiency.
           </p>
           <div className="mx-auto w-[80%] grid gap-8 lg:gap-16 lg:grid-cols-3 mt-8">
-            <div className="flex flex-col justify-between bg-cloudone-blue rounded-lg p-8 shadow-xl md:col-span-2">
-              <h1 className="text-white font-bold text-4xl md:text-5xl text-center md:text-left">
+            <div className="flex flex-col justify-between p-8 rounded-lg shadow-xl bg-cloudone-blue md:col-span-2">
+              <h1 className="text-4xl font-bold text-center text-white md:text-5xl md:text-left">
                 AI software for drone that handles all your needs.
               </h1>
-              <button className="w-fit uppercase px-8 py-4 mx-auto md:mx-0 mt-4 rounded-full flex items-center bg-cloudone-gradient-four text-nowrap">
+              <button className="flex items-center px-8 py-4 mx-auto mt-4 uppercase rounded-full w-fit md:mx-0 bg-cloudone-gradient-four text-nowrap">
                 Get call from us{" "}
                 <BiRightArrowAlt className="ml-2 rotate-[-45deg] text-2xl" />
               </button>
             </div>
-            <div className="jakarta-plus bg-white rounded-lg p-8 shadow-xl text-cloudone-blue">
+            <div className="p-8 bg-white rounded-lg shadow-xl jakarta-plus text-cloudone-blue">
               <div className="text-8xl ">
                 <CiLock />
               </div>
-              <h1 className="font-bold text-lg pt-4">Security</h1>
-              <p className="leading-relaxed pt-4">
+              <h1 className="pt-4 text-lg font-bold">Security</h1>
+              <p className="pt-4 leading-relaxed">
                 Our drone security solutions offer robust protection against
                 potential threats, ensuring safe operations in various
                 environments. Advanced protocols and real-time monitoring keep
                 your fleet secure and resilient.
               </p>
             </div>
-            <div className="jakarta-plus bg-white rounded-lg p-8 shadow-xl text-cloudone-blue">
+            <div className="p-8 bg-white rounded-lg shadow-xl jakarta-plus text-cloudone-blue">
               <div className="text-8xl">
                 <CiWallet />
               </div>
-              <h1 className="font-bold text-lg pt-4">
+              <h1 className="pt-4 text-lg font-bold">
                 Global Compliance and Customization
               </h1>
-              <p className="leading-relaxed pt-4">
+              <p className="pt-4 leading-relaxed">
                 We ensure global compliance by thoroughly researching and
                 adhering to drone regulations in every country. Our drones are
                 custom-designed to meet these diverse legal requirements,
                 ensuring seamless operation across different regions.
               </p>
             </div>
-            <div className="jakarta-plus bg-white rounded-lg p-8 shadow-xl text-cloudone-blue">
+            <div className="p-8 bg-white rounded-lg shadow-xl jakarta-plus text-cloudone-blue">
               <div className="text-8xl ">
                 <CiShare1 />
               </div>
-              <h1 className="font-bold text-lg pt-4">Scalable</h1>
-              <p className="leading-relaxed pt-4">
+              <h1 className="pt-4 text-lg font-bold">Scalable</h1>
+              <p className="pt-4 leading-relaxed">
                 Our solutions are designed to scale seamlessly with your needs,
                 accommodating fleet expansions and evolving requirements
                 effortlessly. This flexibility ensures that security and
                 performance remain optimal as your operations grow
               </p>
             </div>
-            <div className="jakarta-plus bg-white rounded-lg p-8 shadow-xl text-cloudone-blue">
+            <div className="p-8 bg-white rounded-lg shadow-xl jakarta-plus text-cloudone-blue">
               <div className="text-8xl ">
                 <PiReceiptLight />
               </div>
-              <h1 className="font-bold text-lg pt-4">Complete visibility</h1>
-              <p className="leading-relaxed pt-4">
+              <h1 className="pt-4 text-lg font-bold">Complete visibility</h1>
+              <p className="pt-4 leading-relaxed">
                 Gain complete visibility with our comprehensive oversight
                 systems, providing real-time insights into drone operations and
                 security. This enables proactive management and swift response
@@ -144,24 +148,24 @@ function About() {
         <Container className="pt-16">
           {/* <div className='flex flex-col md:flex-row '>
                         <div>
-                            <h1 className='text-5xl md:text-6xl text-center md:text-left  font-bold text-cloudone-blue'><span className='text-cloudone-gradient-four'>Meet Our </span> Cloudone Team</h1>
-                            <p className='leading-relaxed text-center md:text-left text-cloudone-blue pt-8'>Discover the dedicated professionals behind our innovative drone solutions, each bringing expertise and passion to drive excellence in every aspect of our technology.</p>
+                            <h1 className='text-5xl font-bold text-center md:text-6xl md:text-left text-cloudone-blue'><span className='text-cloudone-gradient-four'>Meet Our </span> Cloudone Team</h1>
+                            <p className='pt-8 leading-relaxed text-center md:text-left text-cloudone-blue'>Discover the dedicated professionals behind our innovative drone solutions, each bringing expertise and passion to drive excellence in every aspect of our technology.</p>
                         </div>
-                        <button className='w-fit text-nowrap h-fit uppercase px-8 py-4 mx-auto md:mx-0 mt-8 rounded-full flex items-center bg-cloudone-gradient-four'>Contact Us<BiRightArrowAlt className='ml-2 rotate-[-45deg] text-2xl' /></button>
+                        <button className='flex items-center px-8 py-4 mx-auto mt-8 uppercase rounded-full w-fit text-nowrap h-fit md:mx-0 bg-cloudone-gradient-four'>Contact Us<BiRightArrowAlt className='ml-2 rotate-[-45deg] text-2xl' /></button>
                     </div>
-                    <div className='lg:flex gap-8 pt-16'>
+                    <div className='gap-8 pt-16 lg:flex'>
                         <div className='pt-8'>
                             <h1 className='text-6xl font-bold text-cloudone-blue jakarta-plus'>Our Advisors</h1>
-                            <p className='jakarta-plus pt-4'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
+                            <p className='pt-4 jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                             <div className='flex gap-4'>
                                 <div className='flex flex-col justify-center py-8 w-max-[300px] mx-auto '>
                                     <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='font-bold text-cloudone-blue py-4 jakarta-plus'>Subtopic 1</h1>
+                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
                                     <p className='leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                                 </div>  <div className='flex flex-col justify-center  py-8 w-max-[300px] mx-auto '>
                                     <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center  items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='font-bold text-cloudone-blue py-4 jakarta-plus'>Subtopic 1</h1>
-                                    <p className=' leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
+                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
+                                    <p className='leading-relaxed  jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                                 </div>
                             </div>
                         </div>
@@ -169,19 +173,19 @@ function About() {
                             <img className='w-full' src={Advisors} />
                         </div>
                     </div>
-                    <div className='lg:flex lg:flex-row-reverse gap-8 pt-16'>
+                    <div className='gap-8 pt-16 lg:flex lg:flex-row-reverse'>
                         <div className='pt-8'>
                             <h1 className='text-6xl font-bold text-cloudone-blue jakarta-plus'>Feature 2</h1>
-                            <p className='jakarta-plus pt-4'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
+                            <p className='pt-4 jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                             <div className='flex gap-4'>
                                 <div className='flex flex-col justify-center py-8 w-max-[300px] mx-auto '>
                                     <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='font-bold text-cloudone-blue py-4 jakarta-plus'>Subtopic 1</h1>
+                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
                                     <p className='leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                                 </div>  <div className='flex flex-col justify-center  py-8 w-max-[300px] mx-auto '>
                                     <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center  items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='font-bold text-cloudone-blue py-4 jakarta-plus'>Subtopic 1</h1>
-                                    <p className=' leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
+                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
+                                    <p className='leading-relaxed  jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +193,7 @@ function About() {
                             <img className='w-full' src={Heads} />
                         </div>
                     </div> */}
-          {/* <h1 className='uppercase p-8 rounded-lg bg-cloudone-blue text-4xl font-medium text-gray-100'>Frequently Asked Questions</h1> */}
+          {/* <h1 className='p-8 text-4xl font-medium text-gray-100 uppercase rounded-lg bg-cloudone-blue'>Frequently Asked Questions</h1> */}
 
           <div className="space-y-6">
             <div className="w-full h-auto rounded-[15px] flex flex-col lg:flex-row justify-between items-center bg-[#CAEF45] p-4 md:p-[48px]">
@@ -214,7 +218,7 @@ function About() {
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-items-center">
               {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6"> */}
               {/* <div className="flex flex-col items-center gap-[3.9px]">
                             <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Vivin Silva</p>
@@ -280,12 +284,12 @@ function About() {
                   />
                 </div>
                 <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                <a
+                  <a
                     href="https://www.linkedin.com/in/silvaster"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                  <img src={Linkedin} alt="linkedin" />
+                    <img src={Linkedin} alt="linkedin" />
                   </a>
                 </div>
               </div>
@@ -436,7 +440,7 @@ function About() {
 
         <div className="py-16">
           <Container>
-            <h1 className="uppercase p-8 rounded-lg bg-cloudone-blue text-4xl font-medium text-gray-100">
+            <h1 className="p-8 text-4xl font-medium text-gray-100 uppercase rounded-lg bg-cloudone-blue">
               Frequently Asked Questions
             </h1>
             <div className="lg:flex lg:gap-8">
@@ -456,7 +460,7 @@ function About() {
 }
 
 const Accordian = ({ question, answer }) => (
-  <details className="bg-cloudone-blue text-gray-200 p-8 rounded-xl mt-4">
+  <details className="p-8 mt-4 text-gray-200 bg-cloudone-blue rounded-xl">
     <summary className="cursor-pointer">{question}</summary>
     <p className="pt-4 border-t-[1px] mt-4 border-black/20">{answer}</p>
   </details>
@@ -477,7 +481,7 @@ const ContactForm = ({ className }) => {
       <div className="pt-4 border-t-[1px] mt-4 border-black/20">
         <form id="contact">
           <fieldset className="mt-4">
-            <label className="uppercase block mb-2">Name</label>
+            <label className="block mb-2 uppercase">Name</label>
             <input
               className="w-full p-4 rounded-lg text-cloudone-blue"
               placeholder="Enter your name"
@@ -488,7 +492,7 @@ const ContactForm = ({ className }) => {
             />
           </fieldset>
           <fieldset className="mt-4">
-            <label className="uppercase block mb-2 ">Email</label>
+            <label className="block mb-2 uppercase ">Email</label>
             <input
               className="w-full p-4 rounded-lg text-cloudone-blue"
               placeholder="Enter your email"
@@ -498,7 +502,7 @@ const ContactForm = ({ className }) => {
             />
           </fieldset>
           <fieldset className="mt-4">
-            <label className="uppercase block mb-2">Your question</label>
+            <label className="block mb-2 uppercase">Your question</label>
             <textarea
               className="w-full p-4 rounded-lg text-cloudone-blue"
               rows="4"
