@@ -11,6 +11,20 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import { CARASOUL, FEATURES } from "./constants";
 import ProductsCarasoul from "./ProductsCarasoul";
 
+const scrollToCarousel = () => {
+  const carousel = document.getElementById("products-carousel");
+  if (carousel) {
+    carousel.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+const scrollToFooter = () => {
+  const footer = document.getElementById('footer');
+  if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 function Home() {
   return (
     <>
@@ -26,7 +40,7 @@ function Home() {
               and a vision for the future, we are redefining the possibilities
               of what drones can accomplish in today's rapidly evolving world.
             </p>
-            <button className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0">
+            <button onClick={scrollToFooter} className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0">
               Get A Quote
             </button>
           </div>
@@ -122,14 +136,14 @@ function Home() {
                 grade tech infused Drones
               </p>
             </div>
-            <button className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four">
+            <button onClick={scrollToCarousel} className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four">
               Learn More
             </button>
           </div>
           <VideoPlayer />
         </Container>
       </div>
-      <div>
+      <div id="products-carousel">
         <ProductsCarasoul />
       </div>
       <div className="bg-center bg-cover bg-drone-mountain ">
@@ -145,7 +159,7 @@ function Home() {
               medical evacuations and supply delivery. Our dedication to
               sustainability drives our innovation and development.
             </p>
-            <button className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four">
+            <button onClick={scrollToFooter} className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four">
               Contact Us
             </button>
           </Container>

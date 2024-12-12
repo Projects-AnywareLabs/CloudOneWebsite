@@ -22,10 +22,10 @@ export const ROUTES = [
         NAME:"About Us",
         TO:"/about"
     },
-    // {
-    //     NAME:"Products",
-    //     TO:"/products"
-    // },
+    {
+        NAME:"Products",
+        TO:"/details"
+    },
     // {
     //     NAME:"Pricing",
     //     TO:"/Pricing"

@@ -2,11 +2,13 @@ import logo from '../assets/logo.svg'
 import { FaSquareFacebook, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6'
 import { SOCIAL_LINKS } from './constants'
 import { Link } from 'react-router-dom'
+import { useForm, ValidationError } from '@formspree/react';
+
 
 function Footer() {
 
     return (
-        <footer className='w-full '>
+        <footer id ='footer' className='w-full '>
             <div className='container'><h1 className='text-center md:text-left md:w-2/3 text-4xl md:text-6xl text-[#20343c] font-extrabold uppercase leading-none'>At Cloudone AI Robotics Lab</h1></div>
             <div className='bg-[#20343c]'>
                 <section className='container md:flex md:justify-between md:gap-3 text-center md:text-left'>
@@ -52,20 +54,43 @@ function Footer() {
 }
 
 const SayHelloForm = () => {
-    const submitForm = (e) => {
-        e.preventDefault();
-        console.log("yo");
-    };
+    // const submitForm = (e) => {
+    //     e.preventDefault();
+    //     console.log("yo");
+    // };
+    const [state, handleSubmit] = useForm("mwpkrqqq");
+    if (state.succeeded) {
+        return (
+            <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100 border border-green-300" role="alert">
+                <strong>Success!</strong> We will get in touch with you shortly!
+            </div>
+        );
+    }
     return (
         <div className='bg-white py-4 px-6 rounded-[18px] border-8 border-[#20343c]'>
-            <form onSubmit={submitForm}>
+            <form onSubmit={handleSubmit}>
                 <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">NAME</label>
                 <input id="name" type='text' placeholder='Enter your name' className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]'/>
-                <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">EMAIL</label>
-                <input id="email" type="email" placeholder='Enter your email' className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]'/>
+                <ValidationError 
+            prefix="Name" 
+            field="name"
+            errors={state.errors}
+        />
+                <label  htmlFor="email" className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">EMAIL</label>
+                <input name="email" id="email" type="email" placeholder='Enter your email' className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]'/>
+                <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
                 <label className="inline-block py-[10px] font-roboto font-medium text-[16px] text-[#1D313C]">YOUR QUESTION</label>
+               <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
                 <textarea id="contact" placeholder='Enter Your Question Here ....' name="contact" rows="4" cols="50" className='w-full  rounded-xl p-6 text-gray-800 bg-stone-200 placeholder:text-[#1D313C40]' />
-                <button className='w-full p-4 mt-2 text-lg font-bold text-[#20343c] bg-[#92C83E] rounded-xl' type="submit">Send email</button>
+                <button disabled={state.submitting} className='w-full p-4 mt-2 text-lg font-bold text-[#20343c] bg-[#92C83E] rounded-xl' type="submit">Send email</button>
             </form>
         </div>
     )

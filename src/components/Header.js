@@ -8,6 +8,13 @@ function Header() {
     const toggleMenu = () => {
         return setOpen(!isOpen)
     }
+
+    const scrollToFooter = () => {
+        const footer = document.getElementById('footer');
+        if (footer) {
+            footer.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <header className='py-2 w-full flex justify-between bg-white drop-shadow-md sticky top-0 z-10'>
             <div className='container flex justify-between'>
@@ -22,7 +29,7 @@ function Header() {
                         ROUTES.map((route) => (<ListItem key={route.NAME} text={route.NAME} to={route.TO} />))
                     }
                 </nav>
-                <button className='hidden lg:block px-8 py-1 my-2 rounded-full font-semibold bg-[#1d313c] text-white'>Schedule a demo</button>
+                <button onClick={scrollToFooter} className='hidden lg:block px-8 py-1 my-2 rounded-full font-semibold bg-[#1d313c] text-white'>Schedule a demo</button>
                 <button onClick={toggleMenu} className='block lg:hidden px-8 py-1 my-2 rounded-full font-semibold bg-[#1d313c] text-white'><MdMenu /></button>
             </div>
             <div style={{ left: `${isOpen ? '0%' : '100%'}`, display:`${isOpen ? 'block' : 'none'}`  }} className='w-full h-screen absolute z-20 top-0 left-[100%] bg-white hidden'>

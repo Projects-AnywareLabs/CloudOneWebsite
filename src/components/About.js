@@ -8,7 +8,7 @@ import Container from "./Container";
 
 import { ACCORDIAN_ITEMS } from "./constants";
 import Testinonials from "./Testinonials";
-
+import { useForm, ValidationError } from '@formspree/react';
 import AllMembersArrowImg from "../assets/all_members_button.png";
 
 // import TeamMember2Img from "../assets/team_member2.png";
@@ -28,7 +28,15 @@ import Linkedin from "../assets/Linkedin.png";
 // import Nayzak_Patterns from "../assets/nayzak_patterns.png";
 // import Crave_Chips from "../assets/crave_chips.png";
 
+
 function About() {
+  const scrollToFooter = () => {
+    const footer = document.getElementById('footer');
+    if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
   return (
     <>
       <div className="h-fit bg-gradient-to-b from-cloudone-gradient-four/55 to-cloudone-gradient-four/0">
@@ -57,7 +65,7 @@ function About() {
               and a vision for the future, we are redefining the possibilities
               of what drones can accomplish in today’s rapidly evolving world.
             </p>
-            <button className="shadow-2xl my-8 py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto ">
+            <button onClick={scrollToFooter} className="shadow-2xl my-8 py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto ">
               Get A Quote
             </button>
           </div>
@@ -86,7 +94,7 @@ function About() {
               <h1 className="text-4xl font-bold text-center text-white md:text-5xl md:text-left">
                 AI software for drone that handles all your needs.
               </h1>
-              <button className="flex items-center px-8 py-4 mx-auto mt-4 uppercase rounded-full w-fit md:mx-0 bg-cloudone-gradient-four text-nowrap">
+              <button  onClick={scrollToFooter} className="flex items-center px-8 py-4 mx-auto mt-4 uppercase rounded-full w-fit md:mx-0 bg-cloudone-gradient-four text-nowrap">
                 Get call from us{" "}
                 <BiRightArrowAlt className="ml-2 rotate-[-45deg] text-2xl" />
               </button>
@@ -466,10 +474,19 @@ const Accordian = ({ question, answer }) => (
   </details>
 );
 const ContactForm = ({ className }) => {
-  const submitForm = (e) => {
-    e.preventDefault();
-    console.log("yo");
-  };
+//   const submitForm = (e) => {
+//     e.preventDefault();
+//     console.log("yo");
+//   };
+
+const [state, handleSubmit] = useForm("mwpkrqqq");
+if (state.succeeded) {
+  return (
+      <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100 border border-green-300" role="alert">
+          <strong>Success!</strong> We will get in touch with you shortly!
+      </div>
+  );
+}
 
   return (
     <div
@@ -479,10 +496,11 @@ const ContactForm = ({ className }) => {
     >
       <p className="uppercase">Ask your question</p>
       <div className="pt-4 border-t-[1px] mt-4 border-black/20">
-        <form id="contact">
+        <form onSubmit={handleSubmit} id="contact">
           <fieldset className="mt-4">
             <label className="block mb-2 uppercase">Name</label>
             <input
+              id="name"
               className="w-full p-4 rounded-lg text-cloudone-blue"
               placeholder="Enter your name"
               type="text"
@@ -490,16 +508,27 @@ const ContactForm = ({ className }) => {
               required
               autofocus
             />
+               <ValidationError 
+            prefix="Name" 
+            field="name"
+            errors={state.errors}
+        />
           </fieldset>
           <fieldset className="mt-4">
             <label className="block mb-2 uppercase ">Email</label>
             <input
+              id="email"
               className="w-full p-4 rounded-lg text-cloudone-blue"
               placeholder="Enter your email"
               type="email"
               tabindex="2"
               required
             />
+             <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
           </fieldset>
           <fieldset className="mt-4">
             <label className="block mb-2 uppercase">Your question</label>
@@ -510,12 +539,17 @@ const ContactForm = ({ className }) => {
               tabindex="5"
               required
             ></textarea>
+            <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
           </fieldset>
           <fieldset className="mt-4">
             <button
               className="w-full p-4 mt-2 text-lg font-bold text-[#20343c] bg-yellow-500  rounded-xl"
               type="submit"
-              onClick={submitForm}
+              disabled={state.submitting}
             >
               Send
             </button>

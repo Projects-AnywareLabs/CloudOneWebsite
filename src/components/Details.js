@@ -8,21 +8,27 @@ import DGIDrone from "../assets/Drone pngs/Drone4.png";
 const overviewCardsData = [
   {
     img: ProductIcon,
-    title: "Title goes here",
+    title: "Autonomous Operations",
     desc: "Autonomous mission planning and payload delivery capability allowing for quick operational and logistics support",
   },
   {
     img: ProductIcon,
-    title: "Title goes here",
-    desc: "Swappable motor-arms with single and coaxial motor fittings allowing larger flight, range and payload envelope",
+    title: "Enhanced Flight Efficiency",
+    desc: "Foldable motor-arms with single and coaxial motor fittings allowing larger flight, range and payload envelope",
   },
   {
     img: ProductIcon,
-    title: "Title goes here",
-    desc: "Polycarbonate and aluminum material for lighter and compact quadcopter footprint",
+    title: "Lightweight Durability",
+    desc: "CarbonFibre and aluminum material for lighter and compact quadcopter footprint",
   },
 ];
 
+const scrollToFooter = () => {
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.scrollIntoView({ behavior: "smooth" });
+  }
+};
 const specification = [
   {
     title: "Powertrain",
@@ -30,7 +36,7 @@ const specification = [
   },
   {
     title: "Drive Motor",
-    spec: "Curved Magnet BLDC Motor",
+    spec: "T-Motor ",
   },
   {
     title: "Maximum Altitude",
@@ -47,10 +53,10 @@ const specification = [
 ];
 
 const features = [
-  { design: "Airframe Design :", detail: "I-Type Swappable Motor-Arm Frame" },
-  { design: "Airframe Design :", detail: "I-Type Swappable Motor-Arm Frame" },
-  { design: "Airframe Design :", detail: "I-Type Swappable Motor-Arm Frame" },
-  { design: "Body Material :", detail: "Carbon Composite, Aluminum Alloy" },
+  { design: "Propeller", detail: "Carbon fiber propellors" },
+  { design: "Airframe Configuration", detail: "Quadcopter" },
+  { design: "Airframe Design :", detail: "Foldable Frame design" },
+  { design: "Body Material :", detail: "Carbon Composite" },
 ];
 
 const Details = () => {
@@ -102,7 +108,7 @@ const Details = () => {
             payload carrying and delivery mission culpability.Prima facie
             features of the drone are:
           </p>
-          <button className="px-6 py-3 bg-[#92C83E] font-medium  text-white rounded-2xl ">
+          <button onClick={scrollToFooter} className="px-6 py-3 bg-[#92C83E] font-medium  text-white rounded-2xl ">
             Get a demo
           </button>
         </div>
