@@ -25,9 +25,9 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded-lg 2xl:pl-[10rem]">
+    <div className="bg-white p-6 rounded-lg 2xl:pl-[10rem] md:mt-0 mt-[-6rem]">
       <h3 className="text-sm text-gray-500">Counter Section</h3>
-      <h1 className="text-[50px] 2xl:text-[57px] font-[700] mt-2">
+      <h1 className="text-[40px] md:text-[50px] 2xl:text-[57px] font-[700] mt-2">
         Limited-Time <span className="text-green-500">Offer!</span>
       </h1>
       <p className="text-[#1D313C] mt-2 font-[400] text-[16px]">
@@ -59,7 +59,7 @@ const CountdownTimer = () => {
       {/* Description */}
       <div className="mt-6">
         <h2 className="font-[600] text-[32px] text-[#1D2026]">Description</h2>
-        <p className="text-[#4E5566] font-[400] mt-2 text-[18px] xl2:text-[20px] 2xl:text-[24px] leading-[45px]">
+        <p className="text-[#4E5566] font-[400] mt-2 text-[14px] md:text-[18px] xl2:text-[20px] 2xl:text-[24px] leading-[25px] md:leading-[45px]">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
         </p>
       </div>
