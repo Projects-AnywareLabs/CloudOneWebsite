@@ -24,6 +24,9 @@ module.exports = {
         inset 0px 2.7px 6.75px 1.35px #FFFFFF
       `,
       },
+      screens: {
+        "xl2": "1400px", // Custom breakpoint for 1900px
+      },
       // keyframes:{
       //   "move-left": {
       //     "0%, 100%": { translate-X : }

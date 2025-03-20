@@ -5,6 +5,8 @@ import About from "./components/About";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Details from "./components/Details";
+import Blogs from "./components/Blogs";
+import Courses from "./components/Courses";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         {/* <Route path="/pricing" element={<Page heading="PRICING" />}></Route> */}
         {/* <Route path="/resources" element={<Page heading="RESOURCES" />}></Route> */}
         <Route path="/details" element={<Details />}></Route>
+        <Route path="/blogs" element={<Blogs/>}></Route>
+        <Route path="/courses" element={<Courses/>}></Route>
       </Routes>
       <Footer />
     </>

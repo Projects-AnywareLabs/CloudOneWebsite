@@ -26,14 +26,14 @@ export const ROUTES = [
         NAME:"Products",
         TO:"/details"
     },
-    // {
-    //     NAME:"Pricing",
-    //     TO:"/Pricing"
-    // },
-    // {
-    //     NAME:"Resources",
-    //     TO:"/resources"
-    // }
+    {
+        NAME:"Blogs",
+        TO:"/blogs"
+    },
+    {
+        NAME:"Courses",
+        TO:"/courses"
+    }
 ]
 
 export const CUSTOMERS_SATISFIED = "2,157"
