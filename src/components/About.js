@@ -28,6 +28,7 @@ import Linkedin from "../assets/Linkedin.png";
 // import Nayzak_Patterns from "../assets/nayzak_patterns.png";
 // import Crave_Chips from "../assets/crave_chips.png";
 
+import StarBorder from "../../src/components/StarBorder"
 
 function About() {
   const scrollToFooter = () => {
@@ -65,9 +66,9 @@ function About() {
               and a vision for the future, we are redefining the possibilities
               of what drones can accomplish in today’s rapidly evolving world.
             </p>
-            <button onClick={scrollToFooter} className="shadow-2xl my-8 py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto ">
+            <StarBorder onClick={scrollToFooter} className="shadow-2xl my-8 py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto ">
               Get A Quote
-            </button>
+            </StarBorder>
           </div>
           <div className="hidden w-full my-auto lg:block">
             <img

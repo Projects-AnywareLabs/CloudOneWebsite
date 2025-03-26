@@ -1,9 +1,10 @@
 import React from 'react';
+import cld1 from "../assets/cld1.png"
 
 const stats = [
-    { value: "40+", label: "Book Purchased" },
-    { value: "80+", label: "Test given" },
-    { value: "71+", label: "Number of Training" },
+    { value: "40+", label: "Workshops conducted" },
+    { value: "80+", label: "Certified Drone Pilots" },
+    { value: "3+", label: "Cities" },
   ];
 
 const Guide = () => {
@@ -13,22 +14,22 @@ const Guide = () => {
       
       {/* Left Section */}
       <div className="lg:w-full text-center lg:text-left">
-        <p className="text-gray-600 mb-2 text-[12px] xl:text-sm">Lorem ipsum dolor sit</p>
+        {/* <p className="text-gray-600 mb-2 text-[12px] xl:text-sm">Lorem ipsum dolor sit</p> */}
         
         {/* Star Ratings */}
-        <div className="flex items-center justify-center lg:justify-start space-x-2 text-yellow-500 mb-3">
+        {/* <div className="flex items-center justify-center lg:justify-start space-x-2 text-yellow-500 mb-3">
           {'⭐'.repeat(5)}
           <span className="text-gray-600 text-[12px] xl:text-sm">4.8 (451,444 Ratings)</span>
-        </div>
+        </div> */}
 
         {/* Title */}
         <h1 className="text-[30px] xl:text-[40px] xl2:text-[50px] 2xl:text-[55px] font-[600] leading-tight lg:pr-5">
-          Master the DET with Our <span className="text-green-600">Comprehensive Guide!</span>
+          Master Drone Piloting with our <span className="text-green-600">Comprehensive Hands-on Workshop!</span>
         </h1>
 
         {/* Description */}
         <p className="text-[#6B6B6B] mt-4 font-[400] xl2:text-[18px] 2xl:text-[24px]">
-          Unlock success in the Duolingo English Test with "The Guide" – your roadmap to acing every question type. Expertly curated content, realistic examples, and invaluable tips await you.
+        At CloudOne AI, we empower individuals and businesses with comprehensive drone training programs. Whether you're a beginner or an experienced professional, our workshops provide hands-on learning, technical expertise, and industry insights to help you master drone technology.
         </p>
 
         {/* Buttons */}
@@ -36,9 +37,9 @@ const Guide = () => {
           <button className="bg-[#1D313C] text-white px-8 text-[14px] md:px-10 md:text-[16px] lg:px-6 xl:px-10 py-3 rounded-lg lg:text-[14px] xl2:text-[16px] 2xl:text-[18px] font-[600]">
             Download The Guide Now
           </button>
-          <button className="border border-[#E6E6E6] px-8 text-[14px] md:px-10 md:text-[16px] lg:px-6 xl:px-10 py-3 rounded-lg lg:text-[14px] xl2:text-[16px] 2xl:text-[18px] font-[600] text-[#6B6B6B]">
+          {/* <button className="border border-[#E6E6E6] px-8 text-[14px] md:px-10 md:text-[16px] lg:px-6 xl:px-10 py-3 rounded-lg lg:text-[14px] xl2:text-[16px] 2xl:text-[18px] font-[600] text-[#6B6B6B]">
             Get Started
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -46,7 +47,7 @@ const Guide = () => {
       <div className="mt-10 lg:mt-0 flex justify-center">
         
         {/* Main Image */}
-        <img src="/courses_poster.svg" alt="poster" />
+        <img src={cld1} alt="poster" />
 
         
       </div>

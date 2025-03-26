@@ -19,6 +19,10 @@ export const SOCIAL_LINKS = {
 
 export const ROUTES = [
     {
+        NAME:"Home",
+        TO:"/"
+    },
+    {
         NAME:"About Us",
         TO:"/about"
     },
@@ -26,6 +30,20 @@ export const ROUTES = [
         NAME:"Products",
         TO:"/details"
     },
+    // {
+    //     NAME:"Services",
+    //     TO:"/services",
+    //     DROPDOWN: [
+    //         {
+    //             NAME: "Drones as Service",
+    //             TO: "/services/drones-as-service"
+    //         },
+    //         {
+    //             NAME: "Others",
+    //             TO: "/services/others"
+    //         }
+    //     ]
+    // },
     {
         NAME:"Blogs",
         TO:"/blogs"
@@ -33,6 +51,11 @@ export const ROUTES = [
     {
         NAME:"Courses",
         TO:"/courses"
+    },
+    {
+        NAME:"AI Solutions",
+        TO: "https://neurifytech.ai/",
+        EXTERNAL: true  // Optiona
     }
 ]
 

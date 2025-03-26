@@ -2,10 +2,10 @@ import React from "react";
 
 const CourseRequirements = () => {
   const requirements = [
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Basic introduction to drone technology.",
+    "In-depth understanding of drone components and flight mechanics.",
+    "Basics of drone assembly and programming. ",
+    "Training for DGCA Remote Pilot Certification in India.",
   ];
 
   return (
