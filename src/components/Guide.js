@@ -23,7 +23,7 @@ const Guide = () => {
         </div> */}
 
         {/* Title */}
-        <h1 className="text-[30px] xl:text-[40px] xl2:text-[50px] 2xl:text-[55px] font-[600] leading-tight lg:pr-5">
+        <h1 className="text-[31px] xl:text-[40px] xl2:text-[50px] 2xl:text-[55px] font-[600] leading-tight lg:pr-5">
           Master Drone Piloting with our <span className="text-green-600">Comprehensive Hands-on Workshop!</span>
         </h1>
 
