@@ -18,6 +18,7 @@ import TeamMember5Img from "../assets/team_member5.png";
 import TeamMember7Img from "../assets/team_member7.jpg";
 import TeamMember8Img from "../assets/team_member8.jpg";
 import TeamMember9Img from "../assets/team_member9.jpg";
+import Rifin from "../assets/rifin.jpeg"
 import TeamMember10Img from "../assets/team_member10.jpg";
 // import TeamMember6Img from "../assets/team_member6.png";
 // import Facebook from "../assets/facebook.png";
@@ -282,7 +283,7 @@ function About() {
                     Silvaster Antony
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Founder & CEO
+                    Director & CEO
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
@@ -302,7 +303,7 @@ function About() {
                   </a>
                 </div>
               </div>
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
                     Tarun Kumar Jhabakh
@@ -321,14 +322,14 @@ function About() {
                 <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
                   <img src={Linkedin} alt="linkedin" />
                 </div>
-              </div>
+              </div> */}
               <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
                     Vivin Silva
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Chief Operating Officer
+                    Director
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
@@ -355,12 +356,12 @@ function About() {
                     Rifin Silva
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Chief Engineer Artificial intelligence
+                    Director
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
                   <img
-                    src={TeamMember9Img}
+                    src={Rifin}
                     alt="team_member_1"
                     className="w-full h-auto rounded-[15px]"
                   />
@@ -376,7 +377,7 @@ function About() {
                 </div>
               </div>
 
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
                     Sanjay Kumar
@@ -401,9 +402,9 @@ function About() {
                     <img src={Linkedin} alt="linkedin" />
                   </a>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
                     Ritika Jhagta
@@ -428,7 +429,7 @@ function About() {
                     <img src={Linkedin} alt="linkedin" />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* <!-- Move this div below for screens below lg (below 1024px) --> */}

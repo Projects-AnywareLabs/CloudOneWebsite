@@ -18,10 +18,10 @@ export const SOCIAL_LINKS = {
 }
 
 export const ROUTES = [
-    {
-        NAME:"Home",
-        TO:"/"
-    },
+    // {
+    //     NAME:"Home",
+    //     TO:"/"
+    // },
     {
         NAME:"About Us",
         TO:"/about"
@@ -30,6 +30,7 @@ export const ROUTES = [
         NAME:"Products",
         TO:"/details"
     },
+    
     // {
     //     NAME:"Services",
     //     TO:"/services",
@@ -45,18 +46,20 @@ export const ROUTES = [
     //     ]
     // },
     {
-        NAME:"Blogs",
-        TO:"/blogs"
-    },
-    {
-        NAME:"Courses",
+        NAME:"Training",
         TO:"/courses"
     },
+   
+    
     {
         NAME:"AI Solutions",
         TO: "https://neurifytech.ai/",
         EXTERNAL: true  // Optiona
-    }
+    },
+    {
+        NAME:"Blogs",
+        TO:"/blogs"
+    },
 ]
 
 export const CUSTOMERS_SATISFIED = "2,157"
