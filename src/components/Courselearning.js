@@ -14,7 +14,7 @@ const Courselearning = () => {
           {/* Green Check Icon */}
           <img src="/CheckCircle.svg" className="text-green-500 mt-1" size={20} alt="check"/>
           {/* Text Content */}<p className="font-[400] text-[18px] xl2:text-[20px] 2xl:text-[26px] text-[#4E5566]">
-              Learn the fundamentals of drone operation, flight control, safety, and regulations.
+              Learn the fundamentals of drone operation, flight control, safety, and regulation. 
             </p>
         </li>
         <li key="2" className="flex items-start space-x-3">
