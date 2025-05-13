@@ -25,8 +25,17 @@ module.exports = {
       `,
       },
       screens: {
-        "xl2": "1400px", // Custom breakpoint for 1900px
+        "xl2": "1400px",
+        "3xl": "1800px",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        opensans: ["Open Sans", "sans-serif"],
+        plusJakartaSans: ["Open Sans", "sans-serif"],
+      }
       // keyframes:{
       //   "move-left": {
       //     "0%, 100%": { translate-X : }

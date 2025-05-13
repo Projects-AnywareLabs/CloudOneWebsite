@@ -20,6 +20,8 @@ import TeamMember8Img from "../assets/team_member8.jpg";
 import TeamMember9Img from "../assets/team_member9.jpg";
 import Rifin from "../assets/rifin.jpeg"
 import TeamMember10Img from "../assets/team_member10.jpg";
+import riffin_passport from "../assets/riffin_passport.jpeg"
+// import riffin_passport from "/riffin_passport.jpeg"
 // import TeamMember6Img from "../assets/team_member6.png";
 // import Facebook from "../assets/facebook.png";
 // import Twitter from "../assets/twitter.png";
@@ -228,7 +230,7 @@ function About() {
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-items-center">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
               {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6"> */}
               {/* <div className="flex flex-col items-center gap-[3.9px]">
                             <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Vivin Silva</p>
@@ -283,7 +285,7 @@ function About() {
                     Silvaster Antony
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Director & CEO
+                  Director/ CEO
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
@@ -303,7 +305,7 @@ function About() {
                   </a>
                 </div>
               </div>
-              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
+             {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
                 <div className="flex flex-col items-center gap-[3.9px]">
                   <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
                     Tarun Kumar Jhabakh
@@ -329,7 +331,7 @@ function About() {
                     Vivin Silva
                   </p>
                   <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Director
+                  Director
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
@@ -360,11 +362,13 @@ function About() {
                   </p>
                 </div>
                 <div className="w-full h-auto max-w-[395px]">
+                  <div className="h-[360px]">
                   <img
-                    src={Rifin}
+                    src={riffin_passport}
                     alt="team_member_1"
-                    className="w-full h-auto rounded-[15px]"
+                    className="w-full h-full bg-cover  rounded-[15px]"
                   />
+                  </div>
                 </div>
                 <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
                   <a

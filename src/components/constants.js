@@ -46,8 +46,12 @@ export const ROUTES = [
     //     ]
     // },
     {
+        NAME:"Blogs",
+        TO:"/blogs"
+    },
+    {
         NAME:"Training",
-        TO:"/courses"
+        TO:"/training"
     },
    
     
