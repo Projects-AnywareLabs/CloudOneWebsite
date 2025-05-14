@@ -41,6 +41,11 @@
     border-radius: 20px;
     z-index: 1;
   }
+
+.dummy-css-vercel {
+
+    
+}
   
   @keyframes star-movement-bottom {
     0% {
