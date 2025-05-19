@@ -20,7 +20,7 @@ const Droneworking = () => {
       {/* Right Content */}
       <div className="mt-20 lg:mt-0">
         <h2 className="text-[50px] sm:text-[90px] lg:text-[80px] xl2:text-[95px] 3xl:text-[120px] font-[600] font-inter leading-tight">
-          Learn How <span className="text-green-500">Drones Work</span>
+          Join the <span className="text-green-500">CloudOne AI</span> Drone Bootcamp
         </h2>
         <p className="text-[#6B6B6B] mt-6 font-inter font-[500] text-[14px] sm:text-[18px] 3xl:text-[20px] text-start">
         Looking to attend a drone bootcamp or organize a drone workshop for your school, college, or tech event?

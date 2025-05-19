@@ -1,15 +1,17 @@
 import React, { useRef, useState } from "react";
 import Container from "./Container";
 import AirplaneLuggage from "../assets/AirplaneLuggage.png";
-import VideoSource from "../assets/dronevideo.mp4"
+import VideoSource from "../assets/dronevideo.mp4";
 import DGIDrone from "../assets/Drone pngs/Drone5.png";
 import Testinonials from "./Testinonials";
-import CarasoulCard from "./CarasoulCard";
-import Carasoul from "./Carasoul";
 import { FaPlay, FaPause } from "react-icons/fa";
 
 import { CARASOUL, FEATURES } from "./constants";
+
 import ProductsCarasoul from "./ProductsCarasoul";
+import DroneModelViewer from "./DroneModelViewer";
+import Carasoul from "./Carasoul";
+import CarasoulCard from "./CarasoulCard";
 
 const scrollToCarousel = () => {
   const carousel = document.getElementById("products-carousel");
@@ -19,11 +21,18 @@ const scrollToCarousel = () => {
 };
 
 const scrollToFooter = () => {
-  const footer = document.getElementById('footer');
+  const footer = document.getElementById("footer");
   if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    footer.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+const DroneModelsData = [
+  {
+    name: "Drone 1",
+    modelUrl: "drone-models/solar-drone.fbx",
+  },
+];
 
 function Home() {
   return (
@@ -40,15 +49,30 @@ function Home() {
               and a vision for the future, we are redefining the possibilities
               of what drones can accomplish in today's rapidly evolving world.
             </p>
-            <button onClick={scrollToFooter} className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0">
+            <button
+              onClick={scrollToFooter}
+              className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0"
+            >
               Get A Quote
             </button>
           </div>
+          <div className="w-full h-full md:h-[500px] sm:h-[500px] md:w-2/4">
           <Carasoul>
             {CARASOUL.map((item) => (
-              <CarasoulCard content={item} size={CARASOUL.length} />
+              <CarasoulCard content={item} size={CARASOUL.length}  />
             ))}
           </Carasoul>
+          </div>
+{/* 
+          <div className="w-full h-full md:h-[500px] sm:h-[500px] md:w-2/4">
+            {DroneModelsData.map((drone, index) => (
+              <DroneModelViewer
+                key={index}
+                modelUrl={drone.modelUrl}
+                zoom={true}
+              />
+            ))}
+          </div> */}
         </div>
       </div>
       <div className="h-full">
@@ -60,12 +84,31 @@ function Home() {
           <p className="py-8 font-medium containertext-cloudone-blue"></p>
           <div className="container grid-co lg:grid">
             <div className="pb-0 drone md:pb-0">
-              <img
+            {/* <img
                 src={DGIDrone}
                 alt="Drone-image"
                 className="block w-full h-auto"
-              />
+              /> */}
+               <div className="w-full h-full md:h-[500px] sm:h-[500px]">
+              {DroneModelsData.map((drone, index) => (
+                <DroneModelViewer
+                  key={index}
+                  modelUrl={drone.modelUrl}
+                  zoom={true}
+                />
+              ))}
             </div>
+            </div>
+
+            {/* <div className="w-full h-full md:h-[500px] sm:h-[500px]">
+              {DroneModelsData.map((drone, index) => (
+                <DroneModelViewer
+                  key={index}
+                  modelUrl={drone.modelUrl}
+                  zoom={true}
+                />
+              ))}
+            </div> */}
             {FEATURES.map((feature, i) => {
               var ga = "";
               switch (i) {
@@ -104,7 +147,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#92C83E]">
+      {/* <div className="bg-[#92C83E]">
         <Container className="py-8 md:flex md:justify-between">
           <div className="md:w-2/4">
             <p className="py-4 px-8 w-min text-nowrap bg-[#20343c] text-gray-100 rounded-full mx-auto md:mx-0">
@@ -136,13 +179,16 @@ function Home() {
                 grade tech infused Drones
               </p>
             </div>
-            <button onClick={scrollToCarousel} className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four">
+            <button
+              onClick={scrollToCarousel}
+              className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four"
+            >
               Learn More
             </button>
           </div>
           <VideoPlayer />
         </Container>
-      </div>
+      </div> */}
       <div id="products-carousel">
         <ProductsCarasoul />
       </div>
@@ -159,7 +205,10 @@ function Home() {
               medical evacuations and supply delivery. Our dedication to
               sustainability drives our innovation and development.
             </p>
-            <button onClick={scrollToFooter} className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four">
+            <button
+              onClick={scrollToFooter}
+              className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four"
+            >
               Contact Us
             </button>
           </Container>

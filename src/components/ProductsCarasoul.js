@@ -43,81 +43,82 @@
 
 // export default ProductsCarasoul
 
-
-import React, { useState } from 'react';
-import Container from './Container';
-import { PRODUCTS } from './constants';
+import React, { useState } from "react";
+import Container from "./Container";
+import { PRODUCTS } from "./constants";
+// import DroneModelViewer from "./DroneModelViewer";
 // import DeliveryDrone from '../assets/DeliveryDrone.png';
 
 function ProductsCarasoul() {
-    const [activeTab, setActiveTab] = useState('Nimbus-S');
+  const [activeTab, setActiveTab] = useState("Haps");
 
-    const handleTabClick = (tabName) => {
-        setActiveTab(tabName);
-    };
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
 
-    const getButtonStyle = (tabName) => {
-        return activeTab === tabName
-            ? 'px-4 py-2 bg-[#92C83E] text-white rounded-md flex-shrink-0'
-            : 'px-4 py-2  rounded-md flex-shrink-0';
-    };
+  const getButtonStyle = (tabName) => {
+    return activeTab === tabName
+      ? "px-4 py-2 bg-[#92C83E] text-white rounded-md flex-shrink-0"
+      : "px-4 py-2  rounded-md flex-shrink-0";
+  };
 
-    const renderContent = () => {
-        const product = PRODUCTS.find(product => product.name === activeTab);
-        if (!product) return null;
-
-        return (
-            <>
-                <div>
-                    <p className="uppercase pb-8">Product</p>
-                    <h1 className="text-4xl font-bold pb-4">{product.name}</h1>
-                    <p>{product.description}</p>
-                </div>
-                <div className='md:hidden w-full py-8'>
-                    <img className='w-full' alt='product-image' src={product.image} />
-                </div>
-                <div className="grid grid-cols-2 py-8 gap-8">
-                    {
-                        product.features.map((feature, index) => (
-                            <div key={index}>
-                                <h1 className="font-bold text-cloudone-blue">{feature.title}</h1>
-                                <p className="text-gray-800/80 py-2">{feature.description}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </>
-        );
-    };
+  const renderContent = () => {
+    const product = PRODUCTS.find((product) => product.name === activeTab);
+    if (!product) return null;
 
     return (
-        <div className='py-8'>
-            <Container>
-                <div className="flex gap-2 relative p-2 border-2 rounded-2xl overflow-hidden justify-center md:mx-auto">
-                    {['Nimbus-S', 'Cirrus-CX', 'Nimbus eVTOL Noveo', 'Cirrus Mobile Ground Station'].map(tab => (
-                        <button
-                            key={tab}
-                            className={getButtonStyle(tab)}
-                            onClick={() => handleTabClick(tab)}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-                </div>
-                <div className="pt-8">
-                    <div className="flex gap-8">
-                        <div>
-                            {renderContent()}
-                        </div>
-                        <div className='w-full hidden md:block max-w-[40%] my-auto'>
-                            <img className='w-full' src={PRODUCTS.find(product => product.name === activeTab).image} alt={activeTab} />
-                        </div>
-                    </div>
-                </div>
-            </Container>
+      <>
+        <div>
+          <p className="uppercase pb-8">Product</p>
+          <h1 className="text-4xl font-bold pb-4">{product.name}</h1>
+          <p>{product.description}</p>
         </div>
+        <div className="md:hidden w-full py-8">
+          <img className="w-full" alt="product-image" src={product.image} />
+        </div>
+        <div className="grid grid-cols-2 py-8 gap-8">
+          {product.features.map((feature, index) => (
+            <div key={index}>
+              <h1 className="font-bold text-cloudone-blue">{feature.title}</h1>
+              <p className="text-gray-800/80 py-2">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </>
     );
+  };
+
+  return (
+    <div className="py-8">
+      <Container>
+        <div className="flex gap-2 relative p-2 border-2 rounded-2xl overflow-hidden justify-center md:mx-auto">
+          {["Haps", "Nimbus-X", "Cirrus-CX"].map((tab) => (
+            <button
+              key={tab}
+              className={getButtonStyle(tab)}
+              onClick={() => handleTabClick(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+        <div className="pt-8">
+          <div className="flex gap-8">
+            <div>{renderContent()}</div>
+            <div className="w-full hidden md:block max-w-[40%] my-auto">
+              <img
+                className="w-full"
+                src={
+                  PRODUCTS.find((product) => product.name === activeTab).image
+                }
+                alt={activeTab}
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
 }
 
 export default ProductsCarasoul;
-
