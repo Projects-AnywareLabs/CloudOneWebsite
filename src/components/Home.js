@@ -41,7 +41,7 @@ function Home() {
         <div className="md:flex md:container">
           <div className="container pt-20 md:mr-8 md:w-2/4">
             <h1 className="font-extrabold text-5xl text-center md:text-left text-[#20343c]">
-              We blend AI and innovation to redefine drone capabilities
+              We blend AI and innovation to redefine aerial capabilities
             </h1>
             <p className="leading-loose py-8 text-center md:text-left text-[#20343c]">
               At Cloud One, we see drones not just as flying machine but as

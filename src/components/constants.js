@@ -1,6 +1,6 @@
-import HeroDrone1 from "../assets/Drone pngs/Drone.png";
-import HeroDrone2 from "../assets/Drone pngs/Drone3.png";
-import HeroDrone3 from "../assets/Drone pngs/Dronev1.png";
+// import HeroDrone1 from "../assets/Drone pngs/Drone.png";
+// import HeroDrone2 from "../assets/Drone pngs/Drone3.png";
+// import HeroDrone3 from "../assets/Drone pngs/Dronev1.png";
 import { MdLockReset } from "react-icons/md";
 import { SiPayloadcms } from "react-icons/si";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -91,7 +91,7 @@ export const CARASOUL = [
   {
     mainTitle: "We believe that progress only happens when",
     subtext:
-      "Contantly pushing the boundaries of what's possible with the drones",
+      "Constantly pushing the boundaries of what's possible with drones.",
     modelUrl: HapsDroneModel,
   },
 ];
