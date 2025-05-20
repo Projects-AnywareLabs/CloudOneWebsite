@@ -1,52 +1,54 @@
 import React from "react";
 
-import DroneOverview from "../../assets/DroneOverview.png";
-import DroneOverviewMobile from "../../assets/DroneOverviewMobile.png";
+// import DroneOverview from "../../assets/DroneOverview.png";
+// import DroneOverviewMobile from "../../assets/DroneOverviewMobile.png";
+
+import DroneOverview from "../../assets/Haps-Drone-Images/Solar-Drone-Image.png";
+import DroneOverviewMobile from "../../assets/Haps-Drone-Images/Solar-Drone-Image.png";
+
 import ProductIcon from "../../assets/productIcon.png";
-import DGIDrone from "../../assets/Drone pngs/Drone4.png";
+import DGIDrone from "../../assets/Haps-Drone-Images/Haps-Drone-Front-Part.png";
 
 const overviewCardsData = [
-    {
-      img: ProductIcon,
-      title: "STRATO GLIDER ARCHITECTURE",
-      desc: "High AR glider base design capable of high-altitude flight allowing wide swath capture",
-    },
-    {
-      img: ProductIcon,
-      title: "DRONE CORE OUTLAY",
-      desc: "Indigenously developed flight-core and comms network system with integrated end-to-end software drive",
-    },
-    {
-      img: ProductIcon,
-      title: "COMPOSITE EFFECTIVENESS",
-      desc: "Manufacturing and assembly process undertake 3D printing and winding technique",
-    },
-  ];
-  
-  const specification = [
-    {
-      title: "Nimbus HAPS Tropo",
-      spec: "Payload: 2 kgs | Endurance: 10 Days | Altitude: 10 kms | Application: Localized Telecom, ISR, Mapping",
-    },
-    {
-      title: "Nimbus HAPS Strato",
-      spec: "Payload: 10 kgs | Endurance: 100 Days | Altitude: 16-24 kms | Application: 5G/6G Telecom, Wide Scale Mapping & ISR",
-    },
-  ];
-  
-  const features = [
-    { design: "Proposed Solution", detail: "NIMBUS" },
-    { design: "Architecture", detail: "HAPS Architecture" },
-  ];
-  
+  {
+    img: ProductIcon,
+    title: "STRATO GLIDER ARCHITECTURE",
+    desc: "High AR glider base design capable of high-altitude flight allowing wide swath capture",
+  },
+  {
+    img: ProductIcon,
+    title: "DRONE CORE OUTLAY",
+    desc: "Indigenously developed flight-core and comms network system with integrated end-to-end software drive",
+  },
+  {
+    img: ProductIcon,
+    title: "COMPOSITE EFFECTIVENESS",
+    desc: "Manufacturing and assembly process undertake 3D printing and winding technique",
+  },
+];
+
+const specification = [
+  {
+    title: "Nimbus HAPS Tropo",
+    spec: "Payload: 2 kgs | Endurance: 10 Days | Altitude: 10 kms | Application: Localized Telecom, ISR, Mapping",
+  },
+  {
+    title: "Nimbus HAPS Strato",
+    spec: "Payload: 10 kgs | Endurance: 100 Days | Altitude: 16-24 kms | Application: 5G/6G Telecom, Wide Scale Mapping & ISR",
+  },
+];
+
+const features = [
+  { design: "Proposed Solution", detail: "NIMBUS" },
+  { design: "Architecture", detail: "HAPS Architecture" },
+];
 
 const scrollToFooter = () => {
-    const footer = document.getElementById("footer");
-    if (footer) {
-      footer.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const HapsDrone = () => {
   return (
@@ -97,7 +99,10 @@ const HapsDrone = () => {
             payload carrying and delivery mission culpability.Prima facie
             features of the drone are:
           </p>
-          <button onClick={scrollToFooter} className="px-6 py-3 bg-[#92C83E] font-medium  text-white rounded-2xl ">
+          <button
+            onClick={scrollToFooter}
+            className="px-6 py-3 bg-[#92C83E] font-medium  text-white rounded-2xl "
+          >
             Get a demo
           </button>
         </div>
@@ -124,8 +129,12 @@ const HapsDrone = () => {
       </div>
 
       <div className="grid grid-cols-1 px-4 py-12 sm:grid-cols-2">
-        <div className="hidden sm:block">
-          <img src={DGIDrone} alt="" className="w-[800px]   h-full " />
+        <div className="hidden sm:block mr-4">
+          <img
+            src={DGIDrone}
+            alt="Drone-Image"
+            className="w-[800px] h-full p-4 object-contain"
+          />
         </div>
         <div className="space-y-6">
           <p className="border-[#00000029] bg-[#F5F5F5] w-fit border shadow-combined rounded-md  uppercase py-2 px-4 font-semibold">
