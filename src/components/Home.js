@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "./Container";
 import AirplaneLuggage from "../assets/AirplaneLuggage.png";
 import VideoSource from "../assets/dronevideo.mp4";
 import DGIDrone from "../assets/Drone pngs/Drone5.png";
+import BannerImage from "../assets/banner-image2.jpg";
 import Testinonials from "./Testinonials";
 import { FaPlay, FaPause } from "react-icons/fa";
-
 import { CARASOUL, FEATURES } from "./constants";
-
 import ProductsCarasoul from "./ProductsCarasoul";
 import DroneModelViewer from "./DroneModelViewer";
 import Carasoul from "./Carasoul";
@@ -35,9 +35,53 @@ const DroneModelsData = [
 ];
 
 function Home() {
+  const { scrollY } = useScroll();
+  const yImage = useTransform(scrollY, [0, 800], [0, -200]); 
+  const yContent = useTransform(scrollY, [0, 800], [0, -100]); 
+  const opacityContent = useTransform(scrollY, [0, 400], [1, 0.9]); 
+  const scaleImage = useTransform(scrollY, [0, 400], [1, 1.1]); 
+
   return (
     <>
-      <div className="">
+      <div className="relative w-full h-[90vh]">
+        <motion.div
+          className="absolute inset-0 w-full h-full"
+          style={{ y: yImage, scale: scaleImage }}
+        >
+          <motion.img
+            src={BannerImage}
+            alt="Hero Banner"
+            className="w-full h-full object-fill"
+            initial={{ opacity: 0, scale: 1.2 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          />
+        </motion.div>
+
+      
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+        >
+          <motion.div
+            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <motion.div
+              className="w-1 h-3 bg-white rounded-full mt-2"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+      <motion.div
+        style={{ y: yContent, opacity: opacityContent }}
+        className=""
+      >
         <div className="md:flex md:container">
           <div className="container pt-20 md:mr-8 md:w-2/4">
             <h1 className="font-extrabold text-5xl text-center md:text-left text-[#20343c]">
@@ -74,7 +118,7 @@ function Home() {
             ))}
           </div> */}
         </div>
-      </div>
+      </motion.div>
       <div className="h-full">
         <div className="py-16 text-center">
           <h1 className="container text-5xl font-bold leading-snug text-cloudone-blue">
