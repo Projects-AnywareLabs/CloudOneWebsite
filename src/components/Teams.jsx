@@ -16,14 +16,14 @@ import AllMembersArrowImg from "../assets/all_members_button.png";
 
 const teamData = {
   chiefPatrons: [
-    {
-      name: "Robert Maria",
-      role: "Founder Investor",
-      description:
-        "Experienced CEO and Managing Director with 24 years of practice\n Currently managing product development and IT companies spanning across Asia & Europe",
-      image: RoberMariaImg,
-      linkedin: null,
-    },
+    // {
+    //   name: "Robert Maria",
+    //   role: "Founder Investor",
+    //   description:
+    //     "Experienced CEO and Managing Director with 24 years of practice\n Currently managing product development and IT companies spanning across Asia & Europe",
+    //   image: RoberMariaImg,
+    //   linkedin: null,
+    // },
     // {
     //   name: "Joseph Francis",
     //   role: "Founder Investor",
