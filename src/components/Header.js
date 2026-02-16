@@ -6,7 +6,6 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 function Header() {
   const [isOpen, setOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
   const toggleMenu = () => {
     return setOpen(!isOpen);
   };
@@ -133,15 +132,15 @@ function Header() {
   );
 }
 
-const ListItem = ({ text, to }) => {
-  return (
-    <Link
-      className="px-4 block md:inline-block text-lg text-[2vw] lg:text-[16px] font-bold uppercase text-center text-gray-700"
-      to={to}
-    >
-      {text}
-    </Link>
-  );
-};
+// const ListItem = ({ text, to }) => {
+//   return (
+//     <Link
+//       className="px-4 block md:inline-block text-lg text-[2vw] lg:text-[16px] font-bold uppercase text-center text-gray-700"
+//       to={to}
+//     >
+//       {text}
+//     </Link>
+//   );
+// };
 
 export default Header;

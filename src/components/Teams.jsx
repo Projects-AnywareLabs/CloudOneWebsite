@@ -4,7 +4,7 @@ import DrAravindImg from "../assets/Team-Member-Photo/team_member2.png";
 import DrPriyadarshnamImg from "../assets/Team-Member-Photo/team_member3.png";
 import SilvasterImg from "../assets/Team-Member-Photo/team_member4.png";
 // import TarunKumarImg from "../assets/Team-Member-Photo/team_member5.png";
-import RoberMariaImg from "../assets/Team-Member-Photo/team_member6.png";
+// import RoberMariaImg from "../assets/Team-Member-Photo/team_member6.png";
 import RitikaJhagtaImg from "../assets/Team-Member-Photo/team_member7.jpg";
 import VivinSilvaImg from "../assets/Team-Member-Photo/team_member8.jpg";
 // import MemberImg from "../assets/Team-Member-Photo/team_member9.png";

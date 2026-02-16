@@ -1,15 +1,15 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./components/About";
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import About from "./components/About";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-// import Details from "./components/Details";
-import Blogs from "./components/Blogs";
-import Courses from "./components/Courses";
-import Academics from "./components/Academics";
-import UAVDrone from "./components/product-dropdown/UAVDrone";
-import HapsDrone from "./components/product-dropdown/HapsDrone";
+// import Home from "./components/Home";
+// // import Details from "./components/Details";
+// import Blogs from "./components/Blogs";
+// import Courses from "./components/Courses";
+// import Academics from "./components/Academics";
+// import UAVDrone from "./components/product-dropdown/UAVDrone";
+// import HapsDrone from "./components/product-dropdown/HapsDrone";
 import Onboarding from "./components/Onboarding";
 
 function App() {

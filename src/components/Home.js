@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "./Container";
-import AirplaneLuggage from "../assets/AirplaneLuggage.png";
+// import AirplaneLuggage from "../assets/AirplaneLuggage.png";
 import VideoSource from "../assets/dronevideo.mp4";
-import DGIDrone from "../assets/Drone pngs/Drone5.png";
+// import DGIDrone from "../assets/Drone pngs/Drone5.png";
 import BannerImage from "../assets/banner-image2.jpg";
 import Testinonials from "./Testinonials";
 import { FaPlay, FaPause } from "react-icons/fa";
@@ -13,12 +13,12 @@ import DroneModelViewer from "./DroneModelViewer";
 import Carasoul from "./Carasoul";
 import CarasoulCard from "./CarasoulCard";
 
-const scrollToCarousel = () => {
-  const carousel = document.getElementById("products-carousel");
-  if (carousel) {
-    carousel.scrollIntoView({ behavior: "smooth" });
-  }
-};
+// const scrollToCarousel = () => {
+//   const carousel = document.getElementById("products-carousel");
+//   if (carousel) {
+//     carousel.scrollIntoView({ behavior: "smooth" });
+//   }
+// };
 
 const scrollToFooter = () => {
   const footer = document.getElementById("footer");
