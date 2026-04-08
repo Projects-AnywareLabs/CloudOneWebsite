@@ -57,12 +57,6 @@ const TestimonialCarousel = () => {
   }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const nextSlide = () => {
-    if (currentIndex < testimonials.length - visibleCount) {
-      setIsTransitioning(true);
-      setCurrentIndex((prev) => prev + 1);
-    }
-  };
 
   const prevSlide = () => {
     if (currentIndex > 0) {
@@ -77,7 +71,7 @@ const TestimonialCarousel = () => {
 
     const interval = setInterval(() => {
       if (currentIndex < testimonials.length - visibleCount) {
-        nextSlide();
+       
       } else {
         setCurrentIndex(0); // restart from beginning
       }
@@ -135,7 +129,7 @@ const TestimonialCarousel = () => {
               </button>
 
               <button 
-                onClick={nextSlide}
+                
                 className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:mr-0 bg-white p-2 rounded-full shadow-md opacity-80 hover:opacity-100 transition-opacity z-10"
                 aria-label="Next testimonial"
               >
