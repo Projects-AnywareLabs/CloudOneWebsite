@@ -45,6 +45,7 @@
 .dummy-css-vercel {
  font-size: 20px;
   position: relative;
+  color : white;
 }
   
   @keyframes star-movement-bottom {
