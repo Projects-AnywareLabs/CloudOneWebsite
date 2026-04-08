@@ -7,7 +7,7 @@ import IISTBanner from './training_components/IISTBanner'
 import HostDroneWorkshop from './training_components/Hostdroneworkshop'
 import TestimonialCarousel from './training_components/Testimonials'
 
-const Training = () => {
+const Academics = () => {
   return (
     <div>
         <Droneworking/>
@@ -21,4 +21,4 @@ const Training = () => {
   )
 }
 
-export default Training
+export default Academics;

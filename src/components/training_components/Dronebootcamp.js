@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa"; // Install react-icons if not already
+
 
 const features = [
   {

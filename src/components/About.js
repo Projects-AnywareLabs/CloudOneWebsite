@@ -9,29 +9,30 @@ import Container from "./Container";
 import { ACCORDIAN_ITEMS } from "./constants";
 import Testinonials from "./Testinonials";
 import { useForm, ValidationError } from '@formspree/react';
-import AllMembersArrowImg from "../assets/all_members_button.png";
+// import AllMembersArrowImg from "../assets/all_members_button.png";
 
 // import TeamMember2Img from "../assets/team_member2.png";
 // import TeamMember3Img from "../assets/team_member3.png";
-import TeamMember4Img from "../assets/team_member4.png";
-import TeamMember5Img from "../assets/team_member5.png";
-import TeamMember7Img from "../assets/team_member7.jpg";
-import TeamMember8Img from "../assets/team_member8.jpg";
-import TeamMember9Img from "../assets/team_member9.jpg";
-import Rifin from "../assets/rifin.jpeg"
-import TeamMember10Img from "../assets/team_member10.jpg";
-import riffin_passport from "../assets/riffin_passport.jpeg"
+// import TeamMember4Img from "../assets/team_member4.png";
+// import TeamMember5Img from "../assets/team_member5.png";
+// import TeamMember7Img from "../assets/team_member7.jpg";
+// import TeamMember8Img from "../assets/team_member8.jpg";
+// import TeamMember9Img from "../assets/team_member9.jpg";
+// import Rifin from "../assets/rifin.jpeg"
+// import TeamMember10Img from "../assets/team_member10.jpg";
+// import riffin_passport from "../assets/riffin_passport.jpeg"
 // import riffin_passport from "/riffin_passport.jpeg"
 // import TeamMember6Img from "../assets/team_member6.png";
 // import Facebook from "../assets/facebook.png";
 // import Twitter from "../assets/twitter.png";
-import Linkedin from "../assets/Linkedin.png";
+// import Linkedin from "../assets/Linkedin.png";
 // import Galaxia_Branding from "../assets/galaxia_branding.png";
 // import John_Mayer_Nyc from "../assets/john_mayer_nyc.png";
 // import Nayzak_Patterns from "../assets/nayzak_patterns.png";
 // import Crave_Chips from "../assets/crave_chips.png";
 
 import StarBorder from "../../src/components/StarBorder"
+import Teams from "./Teams";
 
 function About() {
   const scrollToFooter = () => {
@@ -158,296 +159,7 @@ function About() {
       </div>
       <div>
         <Container className="pt-16">
-          {/* <div className='flex flex-col md:flex-row '>
-                        <div>
-                            <h1 className='text-5xl font-bold text-center md:text-6xl md:text-left text-cloudone-blue'><span className='text-cloudone-gradient-four'>Meet Our </span> Cloudone Team</h1>
-                            <p className='pt-8 leading-relaxed text-center md:text-left text-cloudone-blue'>Discover the dedicated professionals behind our innovative drone solutions, each bringing expertise and passion to drive excellence in every aspect of our technology.</p>
-                        </div>
-                        <button className='flex items-center px-8 py-4 mx-auto mt-8 uppercase rounded-full w-fit text-nowrap h-fit md:mx-0 bg-cloudone-gradient-four'>Contact Us<BiRightArrowAlt className='ml-2 rotate-[-45deg] text-2xl' /></button>
-                    </div>
-                    <div className='gap-8 pt-16 lg:flex'>
-                        <div className='pt-8'>
-                            <h1 className='text-6xl font-bold text-cloudone-blue jakarta-plus'>Our Advisors</h1>
-                            <p className='pt-4 jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                            <div className='flex gap-4'>
-                                <div className='flex flex-col justify-center py-8 w-max-[300px] mx-auto '>
-                                    <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
-                                    <p className='leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                                </div>  <div className='flex flex-col justify-center  py-8 w-max-[300px] mx-auto '>
-                                    <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center  items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
-                                    <p className='leading-relaxed  jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='my-auto'>
-                            <img className='w-full' src={Advisors} />
-                        </div>
-                    </div>
-                    <div className='gap-8 pt-16 lg:flex lg:flex-row-reverse'>
-                        <div className='pt-8'>
-                            <h1 className='text-6xl font-bold text-cloudone-blue jakarta-plus'>Feature 2</h1>
-                            <p className='pt-4 jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                            <div className='flex gap-4'>
-                                <div className='flex flex-col justify-center py-8 w-max-[300px] mx-auto '>
-                                    <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
-                                    <p className='leading-relaxed jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                                </div>  <div className='flex flex-col justify-center  py-8 w-max-[300px] mx-auto '>
-                                    <span className='w-[48px] h-[48px] text-[32px] flex-shrink-0 text-cloudone-blue bg-cloudone-gradient-four flex justify-center  items-center rounded-lg'><FiDatabase /></span>
-                                    <h1 className='py-4 font-bold text-cloudone-blue jakarta-plus'>Subtopic 1</h1>
-                                    <p className='leading-relaxed  jakarta-plus'>At Cloud One, we see drones not just as flying machines but as catalyst for transformation.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='my-auto'>
-                            <img className='w-full' src={Heads} />
-                        </div>
-                    </div> */}
-          {/* <h1 className='p-8 text-4xl font-medium text-gray-100 uppercase rounded-lg bg-cloudone-blue'>Frequently Asked Questions</h1> */}
-
-          <div className="space-y-6">
-            <div className="w-full h-auto rounded-[15px] flex flex-col lg:flex-row justify-between items-center bg-[#CAEF45] p-4 md:p-[48px]">
-              <p className="font-roboto font-semibold text-[24px] md:text-[31px] leading-[40px] md:leading-[54px] uppercase text-center lg:text-left">
-                Meet the brilliant minds behind
-                <span className="font-bold text-[40px] md:text-[60px] leading-[50px] md:leading-[70px]">
-                  {" "}
-                  CLOUDONE
-                </span>
-              </p>
-
-              {/* This div will stay in its original position for large screens (lg) and above  */}
-              <div className="hidden lg:flex w-[208px] h-[66px] justify-between items-center">
-                <p className="font-roboto-mono font-medium text-[16px] md:text-[19px] text-[#1D313C]">
-                  ALL Members
-                </p>
-                <img
-                  src={AllMembersArrowImg}
-                  alt="All Members"
-                  className="w-[50px] md:w-[66px] h-[50px] md:h-[66px] rounded-full"
-                />
-              </div>
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
-              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6"> */}
-              {/* <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Vivin Silva</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Director</p>
-                         </div>
-                         <div className="w-full h-auto max-w-[395px]">
-                           <img src={Vivin} alt="team_member_1" className="w-full h-auto"/>
-                         </div> */}
-              {/* <div className='h-[50px] w-full flex justify-center items-center space-x-[9px]'>
-                             <img src={Facebook} alt="facebook"/>
-                             <img src={Twitter} alt="twitter"/>
-                             <img src={Linkedin} alt="linkedin"/>
-                          </div> */}
-              {/* </div> */}
-              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                          <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Dr. Aravind Vaidyanathan</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Professor, IIST </p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Expert in System Engineering & Propulsion </p>
-
-                         </div>
-                         <div className="w-full h-auto max-w-[395px]">
-                            <img src={TeamMember2Img} alt="team_member_1" className="w-full h-auto"/>
-                          </div>
-                          <div className='h-[50px] w-full flex justify-center items-center space-x-[9px]'>
-                             <img src={Facebook} alt="facebook"/>
-                             <img src={Twitter} alt="twitter"/>
-                             <img src={Linkedin} alt="linkedin"/>
-                          </div>
-                         </div>
-                         <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                          <div className="flex flex-col items-center gap-[3.9px]">
-                            <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">Dr. Priyadarshnam Hari</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Professor, IIST</p>
-                            <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">Expert in Avionics architecture and space system</p>
-
-                         </div>
-                         
-                         <div className="w-full h-auto max-w-[395px]">
-                            <img src={TeamMember3Img} alt="team_member_1" className="w-full h-auto"/>
-                         </div>
-                          <div className='h-[50px] w-full flex justify-center items-center space-x-[9px]'>
-                             <img src={Facebook} alt="facebook"/>
-                             <img src={Twitter} alt="twitter"/>
-                             <img src={Linkedin} alt="linkedin"/>
-                          </div>
-                         </div> */}
-
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Silvaster Antony
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                  Director/ CEO
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <img
-                    src={TeamMember4Img}
-                    alt="team_member_1"
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <a
-                    href="https://www.linkedin.com/in/silvaster"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={Linkedin} alt="linkedin" />
-                  </a>
-                </div>
-              </div>
-             {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Tarun Kumar Jhabakh
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Founder & Investor
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <img
-                    src={TeamMember5Img}
-                    alt="team_member_1"
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <img src={Linkedin} alt="linkedin" />
-                </div>
-              </div> */}
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Vivin Silva
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                  Director
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <img
-                    src={TeamMember8Img}
-                    alt="team_member_1"
-                    className="w-full h-auto rounded-[15px]"
-                  />
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <a
-                    href="https://www.linkedin.com/in/vivin-silva"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={Linkedin} alt="linkedin" />
-                  </a>
-                </div>
-              </div>
-
-              <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Rifin Silva
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Director
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <div className="h-[360px]">
-                  <img
-                    src={riffin_passport}
-                    alt="team_member_1"
-                    className="w-full h-full bg-cover  rounded-[15px]"
-                  />
-                  </div>
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <a
-                    href="https://www.linkedin.com/in/rifin-silva-2685591b9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={Linkedin} alt="linkedin" />
-                  </a>
-                </div>
-              </div>
-
-              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Sanjay Kumar
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Chief Management Officer
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <img
-                    src={TeamMember10Img}
-                    alt="team_member_1"
-                    className="w-full h-auto rounded-[15px]"
-                  />
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <a
-                    href="https://www.linkedin.com/in/tsanjaykumar"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={Linkedin} alt="linkedin" />
-                  </a>
-                </div>
-              </div> */}
-
-              {/* <div className="w-full h-[644px] bg-[#1D313C] bg-[linear-gradient(to_bottom,_#1D313C_40%,_#1A1A1A_40%)] rounded-[15px] flex flex-col justify-around items-center py-4 px-6">
-                <div className="flex flex-col items-center gap-[3.9px]">
-                  <p className="font-roboto font-medium text-[23px] text-[#F9EFEC]">
-                    Ritika Jhagta
-                  </p>
-                  <p className="font-roboto font-normal text-[17px] text-[#B3B3B2]">
-                    Chief Engineer Aeronautics
-                  </p>
-                </div>
-                <div className="w-full h-auto max-w-[395px]">
-                  <img
-                    src={TeamMember7Img}
-                    alt="team_member_1"
-                    className="w-full h-auto rounded-[15px]"
-                  />
-                </div>
-                <div className="h-[50px] w-full flex justify-center items-center space-x-[9px]">
-                  <a
-                    href="https://www.linkedin.com/in/ritika-jhagta-a653a4128"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={Linkedin} alt="linkedin" />
-                  </a>
-                </div>
-              </div> */}
-            </div>
-
-            {/* <!-- Move this div below for screens below lg (below 1024px) --> */}
-            <div className="lg:hidden w-[208px] h-[66px] flex justify-between items-center mt-4 mb-4 mx-auto p-[10px] bg-[#CAEF45] rounded-[10px]">
-              <p className="font-roboto-mono font-medium text-[16px] text-[#1D313C]">
-                ALL Members
-              </p>
-              <img
-                src={AllMembersArrowImg}
-                alt="All Members"
-                className="w-[50px] md:w-[55px] h-[50px] md:h-[55px] rounded-full"
-              />
-            </div>
-          </div>
+          <Teams/>
         </Container>
 
         <div className="pt-16"></div>

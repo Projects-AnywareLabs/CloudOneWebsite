@@ -43,8 +43,10 @@
   }
 
 .dummy-css-vercel {
+ font-size: 20px;
+ position: relative;
+ color : blue;
 
-    
 }
   
   @keyframes star-movement-bottom {
@@ -57,6 +59,8 @@
       opacity: 0;
     }
   }
+
+
   
   @keyframes star-movement-top {
     0% {
@@ -68,4 +72,5 @@
       opacity: 0;
     }
   }
-  
+
+/* Vercel reference */

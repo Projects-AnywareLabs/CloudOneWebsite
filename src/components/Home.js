@@ -1,38 +1,83 @@
-import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "./Container";
-import AirplaneLuggage from "../assets/AirplaneLuggage.png";
-import VideoSource from "../assets/dronevideo.mp4"
-import DGIDrone from "../assets/Drone pngs/Drone5.png";
+
+
+
+import BannerImage from "../assets/banner-image2.jpg";
 import Testinonials from "./Testinonials";
-import CarasoulCard from "./CarasoulCard";
-import Carasoul from "./Carasoul";
-import { FaPlay, FaPause } from "react-icons/fa";
 
 import { CARASOUL, FEATURES } from "./constants";
 import ProductsCarasoul from "./ProductsCarasoul";
-
-const scrollToCarousel = () => {
-  const carousel = document.getElementById("products-carousel");
-  if (carousel) {
-    carousel.scrollIntoView({ behavior: "smooth" });
-  }
-};
+import DroneModelViewer from "./DroneModelViewer";
+import Carasoul from "./Carasoul";
+import CarasoulCard from "./CarasoulCard";
 
 const scrollToFooter = () => {
-  const footer = document.getElementById('footer');
+  const footer = document.getElementById("footer");
   if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    footer.scrollIntoView({ behavior: "smooth" });
   }
 };
 
+const DroneModelsData = [
+  {
+    name: "Drone 1",
+    modelUrl: "drone-models/solar-drone.fbx",
+  },
+];
+
 function Home() {
+  const { scrollY } = useScroll();
+  const yImage = useTransform(scrollY, [0, 800], [0, -200]); 
+  const yContent = useTransform(scrollY, [0, 800], [0, -100]); 
+  const opacityContent = useTransform(scrollY, [0, 400], [1, 0.9]); 
+  const scaleImage = useTransform(scrollY, [0, 400], [1, 1.1]); 
+
   return (
     <>
-      <div className="">
+      <div className="relative w-full h-[90vh]">
+        <motion.div
+          className="absolute inset-0 w-full h-full"
+          style={{ y: yImage, scale: scaleImage }}
+        >
+          <motion.img
+            src={BannerImage}
+            alt="Hero Banner"
+            className="w-full h-full object-fill"
+            initial={{ opacity: 0, scale: 1.2 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          />
+        </motion.div>
+
+      
+        <motion.div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+        >
+          <motion.div
+            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <motion.div
+              className="w-1 h-3 bg-white rounded-full mt-2"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+      <motion.div
+        style={{ y: yContent, opacity: opacityContent }}
+        className=""
+      >
         <div className="md:flex md:container">
           <div className="container pt-20 md:mr-8 md:w-2/4">
             <h1 className="font-extrabold text-5xl text-center md:text-left text-[#20343c]">
-              We blend AI and innovation to redefine drone capabilities
+              We blend AI and innovation to redefine aerial capabilities
             </h1>
             <p className="leading-loose py-8 text-center md:text-left text-[#20343c]">
               At Cloud One, we see drones not just as flying machine but as
@@ -40,17 +85,32 @@ function Home() {
               and a vision for the future, we are redefining the possibilities
               of what drones can accomplish in today's rapidly evolving world.
             </p>
-            <button onClick={scrollToFooter} className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0">
+            <button
+              onClick={scrollToFooter}
+              className=" shadow-2xl py-4 px-8 bg-[#20343c] font-bold rounded-lg text-gray-100 block mx-auto md:mx-0"
+            >
               Get A Quote
             </button>
           </div>
+          <div className="w-full h-full md:h-[500px] sm:h-[500px] md:w-2/4">
           <Carasoul>
             {CARASOUL.map((item) => (
-              <CarasoulCard content={item} size={CARASOUL.length} />
+              <CarasoulCard content={item} size={CARASOUL.length}  />
             ))}
           </Carasoul>
+          </div>
+{/* 
+          <div className="w-full h-full md:h-[500px] sm:h-[500px] md:w-2/4">
+            {DroneModelsData.map((drone, index) => (
+              <DroneModelViewer
+                key={index}
+                modelUrl={drone.modelUrl}
+                zoom={true}
+              />
+            ))}
+          </div> */}
         </div>
-      </div>
+      </motion.div>
       <div className="h-full">
         <div className="py-16 text-center">
           <h1 className="container text-5xl font-bold leading-snug text-cloudone-blue">
@@ -60,12 +120,31 @@ function Home() {
           <p className="py-8 font-medium containertext-cloudone-blue"></p>
           <div className="container grid-co lg:grid">
             <div className="pb-0 drone md:pb-0">
-              <img
+            {/* <img
                 src={DGIDrone}
                 alt="Drone-image"
                 className="block w-full h-auto"
-              />
+              /> */}
+               <div className="w-full h-full md:h-[500px] sm:h-[500px]">
+              {DroneModelsData.map((drone, index) => (
+                <DroneModelViewer
+                  key={index}
+                  modelUrl={drone.modelUrl}
+                  zoom={true}
+                />
+              ))}
             </div>
+            </div>
+
+            {/* <div className="w-full h-full md:h-[500px] sm:h-[500px]">
+              {DroneModelsData.map((drone, index) => (
+                <DroneModelViewer
+                  key={index}
+                  modelUrl={drone.modelUrl}
+                  zoom={true}
+                />
+              ))}
+            </div> */}
             {FEATURES.map((feature, i) => {
               var ga = "";
               switch (i) {
@@ -104,7 +183,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[#92C83E]">
+      {/* <div className="bg-[#92C83E]">
         <Container className="py-8 md:flex md:justify-between">
           <div className="md:w-2/4">
             <p className="py-4 px-8 w-min text-nowrap bg-[#20343c] text-gray-100 rounded-full mx-auto md:mx-0">
@@ -136,13 +215,16 @@ function Home() {
                 grade tech infused Drones
               </p>
             </div>
-            <button onClick={scrollToCarousel} className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four">
+            <button
+              onClick={scrollToCarousel}
+              className="px-8 py-4 mx-auto border-4 rounded-lg sm:block md:absolute md:top-0 md:right-0 md:my-16 border-cloudone-gradient-four"
+            >
               Learn More
             </button>
           </div>
           <VideoPlayer />
         </Container>
-      </div>
+      </div> */}
       <div id="products-carousel">
         <ProductsCarasoul />
       </div>
@@ -159,7 +241,10 @@ function Home() {
               medical evacuations and supply delivery. Our dedication to
               sustainability drives our innovation and development.
             </p>
-            <button onClick={scrollToFooter} className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four">
+            <button
+              onClick={scrollToFooter}
+              className="px-8 py-4 text-gray-100 rounded-full bg-cloudone-gradient-four"
+            >
               Contact Us
             </button>
           </Container>
@@ -171,42 +256,5 @@ function Home() {
   );
 }
 
-const VideoPlayer = () => {
-  const videoRef = useRef(null);
-  const [isPlaying, setPlaying] = useState(false);
-
-  const playPause = () => {
-    if (isPlaying) {
-      videoRef.current.pause();
-      setPlaying(false);
-    } else {
-      setPlaying(true);
-      videoRef.current.play();
-    }
-  };
-  return (
-    <div className="relative w-full py-8 ">
-      <video
-        ref={videoRef}
-        onClick={playPause}
-        className="w-full h-full border-[16px] cursor-pointer rounded-3xl border-cloudone-gradient-four"
-        src={VideoSource}
-        muted
-        loop
-      ></video>
-      <button
-        style={{
-          translate: "-50% -50%",
-          opacity: `${isPlaying ? "0" : "100%"}`,
-        }}
-        className="hidden md:flex absolute top-1/2 left-1/2 w-[100px] border-8 rounded-full h-[100px] bg-cloudone-gradient-four justify-center items-center text-4xl"
-        onClick={playPause}
-      >
-        {" "}
-        {isPlaying ? <FaPause /> : <FaPlay className="ml-2" />}
-      </button>
-    </div>
-  );
-};
 
 export default Home;
