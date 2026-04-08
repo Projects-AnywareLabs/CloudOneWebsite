@@ -56,6 +56,7 @@ const TestimonialCarousel = () => {
     return () => window.removeEventListener('resize', updateVisibleCount);
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const nextSlide = () => {
     if (currentIndex < testimonials.length - visibleCount) {
       setIsTransitioning(true);
