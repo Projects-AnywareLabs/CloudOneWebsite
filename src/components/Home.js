@@ -1,24 +1,16 @@
-import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Container from "./Container";
-import AirplaneLuggage from "../assets/AirplaneLuggage.png";
-import VideoSource from "../assets/dronevideo.mp4";
-import DGIDrone from "../assets/Drone pngs/Drone5.png";
+
+
+
 import BannerImage from "../assets/banner-image2.jpg";
 import Testinonials from "./Testinonials";
-import { FaPlay, FaPause } from "react-icons/fa";
+
 import { CARASOUL, FEATURES } from "./constants";
 import ProductsCarasoul from "./ProductsCarasoul";
 import DroneModelViewer from "./DroneModelViewer";
 import Carasoul from "./Carasoul";
 import CarasoulCard from "./CarasoulCard";
-
-const scrollToCarousel = () => {
-  const carousel = document.getElementById("products-carousel");
-  if (carousel) {
-    carousel.scrollIntoView({ behavior: "smooth" });
-  }
-};
 
 const scrollToFooter = () => {
   const footer = document.getElementById("footer");
@@ -264,42 +256,5 @@ function Home() {
   );
 }
 
-const VideoPlayer = () => {
-  const videoRef = useRef(null);
-  const [isPlaying, setPlaying] = useState(false);
-
-  const playPause = () => {
-    if (isPlaying) {
-      videoRef.current.pause();
-      setPlaying(false);
-    } else {
-      setPlaying(true);
-      videoRef.current.play();
-    }
-  };
-  return (
-    <div className="relative w-full py-8 ">
-      <video
-        ref={videoRef}
-        onClick={playPause}
-        className="w-full h-full border-[16px] cursor-pointer rounded-3xl border-cloudone-gradient-four"
-        src={VideoSource}
-        muted
-        loop
-      ></video>
-      <button
-        style={{
-          translate: "-50% -50%",
-          opacity: `${isPlaying ? "0" : "100%"}`,
-        }}
-        className="hidden md:flex absolute top-1/2 left-1/2 w-[100px] border-8 rounded-full h-[100px] bg-cloudone-gradient-four justify-center items-center text-4xl"
-        onClick={playPause}
-      >
-        {" "}
-        {isPlaying ? <FaPause /> : <FaPlay className="ml-2" />}
-      </button>
-    </div>
-  );
-};
 
 export default Home;

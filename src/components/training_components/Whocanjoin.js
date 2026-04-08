@@ -1,12 +1,11 @@
 import React from "react";
-import { FaUserGraduate, FaUniversity, FaChalkboardTeacher, FaGlobe, FaBuilding } from "react-icons/fa";
 
 const joinOptions = [
-  { icon: <img src="/school.svg" className="size-10"/>, label: "School & College Students" },
-  { icon: <img src="/teacher.svg" className="size-10"/>, label: "Educators looking for tech-driven workshops" },
-  { icon: <img src="/drone.svg" className="size-10"/>, label: "Drone Enthusiasts" },
-  { icon: <img src="/techclub.svg" className="size-10"/>, label: "Tech Clubs & Communities" },
-  { icon: <img src="/engineer.svg" className="size-10"/>, label: "Early-Career Engineers exploring drone technology" },
+  { icon: <img alt="" src="/school.svg" className="size-10"/>, label: "School & College Students" },
+  { icon: <img alt=""src="/teacher.svg" className="size-10"/>, label: "Educators looking for tech-driven workshops" },
+  { icon: <img alt="" src="/drone.svg" className="size-10"/>, label: "Drone Enthusiasts" },
+  { icon: <img alt="" src="/techclub.svg" className="size-10"/>, label: "Tech Clubs & Communities" },
+  { icon: <img alt="" src="/engineer.svg" className="size-10"/>, label: "Early-Career Engineers exploring drone technology" },
 ];
 
 const WhoCanJoin = () => {
